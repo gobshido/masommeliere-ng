@@ -1,5 +1,5 @@
 .main-container{
-    height: 93vh;
+    height: 92vh;
 }
 
 .sidenav{
@@ -15,6 +15,19 @@ nav mat-nav-list a {
     color: #A60815;
 }
 
+mat-toolbar{
+    height: 100px;
+}
+
+mat-icon{
+    height: 40px;
+    width: 40px;
+}
+
+.size-icon{
+    font-size: 40px;
+}
+
 .logo {
     height: 100px;
     width: 200px;
@@ -28,3 +41,7 @@ nav mat-nav-list a {
     color: #A60815;
 }
 
+.icon{
+    height: 50px;
+    width: 50px;
+}

@@ -34,13 +34,22 @@
       <img src="../assets/images/logo-ma-sommeliere.jpg" class="logo">
       <span class="remaining-space"></span>
       <button mat-button class="icon-menu" (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>menu</mat-icon>
+        <mat-icon mat-list-icon class="size-icon">menu</mat-icon>
       </button>
+      <footer class="container-fluid fixed-bottom">
+        <div class="row text-center align-items-center d-flex flex-wrap">
+          <div class="col-sm-4 col-8">
+            <a href="" target="_blank" class="text-decoration-none text-dark">Mentions légales</a>
+          </div>
+          <div class="col-4">
+            <a href="https://www.instagram.com/lucie_dussillols/" target="_blank"><img src="../assets/images/instagram.jpg" class="icon"></a>
+          </div>
+          <div class="col-sm-4 col-8">
+            <a href="" target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a>
+          </div>
+        </div>
+      </footer>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-
-
