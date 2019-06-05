@@ -1,0 +1,30 @@
+.main-container{
+    height: 93vh;
+}
+
+.sidenav{
+    height: 300px;
+    top: 25vh;
+}
+
+mat-sidenav {
+    min-width: 300px;
+}
+
+nav mat-nav-list a {
+    color: #A60815;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+}
+
+.remaining-space {
+    flex: 1 1 auto;
+}
+
+.icon-menu{
+    color: #A60815;
+}
+
