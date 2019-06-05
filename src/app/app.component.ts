@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
   opened: boolean;
   title: string = Globals.APP_NAME;
   constructor(private titleservice: TitleService,
-              private router: Router ) {}
+              private router: Router
+  ) {}
   ngOnInit(): void {
     this.titleservice.init();
   }

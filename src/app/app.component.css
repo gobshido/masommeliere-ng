@@ -41,7 +41,11 @@ mat-icon{
     color: #A60815;
 }
 
-.icon{
+.background{
+    background-color: white;
+}
+
+.icon-footer{
     height: 50px;
     width: 50px;
 }
