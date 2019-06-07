@@ -5,5 +5,5 @@ export class Contactuser {
     heureOuverture: string;
     heureFermeture: string;
     presentation: string;
-    image: string;
+    image: number;
 }

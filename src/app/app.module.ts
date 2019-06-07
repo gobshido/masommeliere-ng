@@ -17,7 +17,8 @@ import { ProfessionnelComponent } from './page/professionnel/professionnel.compo
 import { ActualiteComponent } from './page/actualite/actualite.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { AccueilComponent } from './page/accueil/accueil.component';
-import { ContactuserComponent } from './page/contactuser/contactuser.component';
+import { ImageComponent } from './component/image/image.component';
+import { HtmlPipe } from './pipe/html.pipe';
 
 const appRoutes: Routes = [
   { path: 'accueil',
@@ -38,9 +39,6 @@ const appRoutes: Routes = [
   { path: 'contact',
     component: ContactComponent,
     data : { title: 'Contact'}},
-  { path: 'contactuser',
-    component: ContactuserComponent,
-    data : { title: 'Contactuser'}}
 ];
 
 @NgModule({
@@ -53,7 +51,8 @@ const appRoutes: Routes = [
     ContactComponent,
     ImagepathPipe,
     AccueilComponent,
-    ContactuserComponent
+    ImageComponent,
+    HtmlPipe,
   ],
   imports: [
     BrowserModule,
