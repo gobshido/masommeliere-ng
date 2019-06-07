@@ -2,28 +2,11 @@
   <div class="row text-center align-content-center mt-5">
     <h2 class="col-12 bio-title">PLUS QU'UN METIER, UNE PASSION</h2>
   </div>
-  <div class="row align-content-center my-5">
+  <div class="row align-content-center my-5" *ngFor="let contactuser of contactusers">
     <div class="col-sm-2 col-0"></div>
-    <img src="../../../assets/images/Lucie-presentation.jpg" class="col-sm-4 col-12 mb-2 bio-picture">
+    <img *ngIf="contactuser.image" src="{{ contactuser.image | imagepath }}" class="col-sm-4 col-12 mb-2 bio-picture">
     <div class="col-sm-4 col-12 d-flex flex-column justify-content-center">
-      <div>
-        A l'origine de ce qui allait devenir une passion, il y a un professeur.
-      </div>
-      <div>
-        Envoûtant et passionnant, un passeur d’histoires. Il y a ces visites de vignobles,
-        ces rencontres avec des femmes et des hommes aux mains rugueuses et abîmées.
-        Ce temps passé accroupie pour vendanger et sélectionner les meilleures baies.
-      </div>
-      <div>
-        Ces années passées auprès d 'Alain Ducasse et D'Anne-Sophie Pic ...
-      </div>
-      <div>
-        Et voilà qu’au fil du temps, sans même m’en rendre compte, je devenais assoiffée de connaissances et
-        de découvertes sur cet univers qu’est le vin.
-      </div>
-      <div>
-        Ma Sommelière est venue donner un sens à toutes ces années en partageant mes connaissances et mon savoir.
-      </div>
+      {{ contactuser.presentation }}
     </div>
     <div class="col-sm-2 col-0"></div>
   </div>

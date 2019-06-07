@@ -3,13 +3,12 @@ import { Contactuser } from '../../class/contactuser';
 import { ContactuserService } from '../../service/contactuser.service';
 
 @Component({
-  selector: 'app-presentation',
-  templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.css']
+  selector: 'app-contactuser',
+  templateUrl: './contactuser.component.html',
+  styleUrls: ['./contactuser.component.css']
 })
-export class PresentationComponent implements OnInit {
+export class ContactuserComponent implements OnInit {
   contactusers: Contactuser[];
-
   constructor(private contactServ: ContactuserService) { }
 
   ngOnInit() {
