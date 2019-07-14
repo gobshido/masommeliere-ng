@@ -18,7 +18,13 @@ nav mat-nav-list a {
 mat-toolbar{
     height: 100px;
 }
-
+.mat-drawer-content{
+    overflow: hidden;
+}
+.accueil {
+    position: absolute;
+    top: 150px;
+}
 mat-icon{
     height: 40px;
     width: 40px;
@@ -31,6 +37,7 @@ mat-icon{
 .logo {
     height: 100px;
     width: 200px;
+    margin-bottom: 3px;
 }
 
 .remaining-space {
@@ -49,3 +56,5 @@ mat-icon{
     height: 50px;
     width: 50px;
 }
+
+
