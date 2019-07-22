@@ -1,5 +1,5 @@
 .background{
-    background-image: url("../../../assets/images/cave-degustation.jpg");
+    background-image: url("../../../assets/images/cave-degustation-noir.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -12,11 +12,20 @@
     padding-right: 10px;
 }
 .description{
-    width: 100vw;
+    width: 100%;
     margin: 0;
 }
 .home-text{
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.6);
     font-weight: 600;
+    color: white;
+    text-shadow: -1px 1px black;
+}
+.shadow-back{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 45vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }

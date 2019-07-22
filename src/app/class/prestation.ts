@@ -5,4 +5,5 @@ export class Prestation {
     categorie: string;
     cibles: string;
     modules: string;
+    prices: string;
 }

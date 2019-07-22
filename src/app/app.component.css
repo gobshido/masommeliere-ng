@@ -1,35 +1,48 @@
 .main-container{
-    height: 92vh;
+    height: 88vh;
 }
-
-.sidenav{
-    height: 300px;
-    top: 25vh;
+button:focus{
+    outline: none;
 }
-
 mat-sidenav {
-    min-width: 300px;
+    min-width: 100%;
+    background-image: url("../assets/images/Background-sidenav.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
+.close-menu{
+    color: white;
+    top: 35px;
+    right: 25px;
+    position: relative;
+}
 nav mat-nav-list a {
-    color: #A60815;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
-
 mat-toolbar{
     height: 100px;
 }
-.mat-drawer-content{
-    overflow: hidden;
+.dropdown-toggle::after{
+    margin-top: inherit;
 }
-.accueil {
-    position: absolute;
-    top: 150px;
+.dropdown-menu{
+    background-color: #050505;
 }
-mat-icon{
-    height: 40px;
-    width: 40px;
+.dropdown-item.active{
+    background-color: transparent;
 }
-
+.btn:focus{
+    box-shadow:none;
+}
+.bg-grey{
+    background-color: #e5e5e5;
+}
 .size-icon{
     font-size: 40px;
 }
@@ -39,7 +52,9 @@ mat-icon{
     width: 200px;
     margin-bottom: 3px;
 }
-
+.bg-color{
+    background-color: white;
+}
 .remaining-space {
     flex: 1 1 auto;
 }
@@ -47,11 +62,10 @@ mat-icon{
 .icon-menu{
     color: #A60815;
 }
-
-.background{
-    background-color: white;
+.footer-size{
+    height: 9vh;
+    font-size: 16px;
 }
-
 .icon-footer{
     height: 50px;
     width: 50px;

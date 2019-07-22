@@ -1,0 +1,21 @@
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.title{
+    font-size: 30px;
+    color: #A60815;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.prix{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.devis{
+    font-size: 10px;
+    bottom: 90px;
+    position: fixed;
+}

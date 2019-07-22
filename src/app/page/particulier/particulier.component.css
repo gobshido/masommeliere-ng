@@ -1,4 +1,27 @@
-.menu {
-    display: flex;
-    justify-content: center;
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.title{
+    font-size: 30px;
+    color: #A60815;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.bg-grey{
+    background-color: #e5e5e5;
+}
+.initiation{
+    max-width: 33vw;
+}
+.prestaName{
+    color: #A60815;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.prix{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }

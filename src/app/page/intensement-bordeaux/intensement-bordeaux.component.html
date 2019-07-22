@@ -1,0 +1,23 @@
+<div class="row justify-content-center">
+  <div *ngFor="let prestation of prestations">
+    <div *ngIf="prestation.nom == 'Intensément Bordeaux'">
+      <div class="col initiation">
+        <div class="d-flex justify-content-center title">{{titleService.currentTitle}}</div>
+        <div *ngFor="let prix of prestation.prices">
+          <div *ngIf="prix.isDesactivated == '0'" class="text-center prix">
+            <span [innerHTML]="prix.value"></span>
+            <span [innerHTML]="prix.devise + ' / personne'"></span>
+          </div>
+        </div>
+        <div *ngFor="let module of prestation.modules" class="text-center">
+          <div class="cadre">
+            <div [innerHTML]="module.nom | html" class="modName"></div>
+            <div [innerHTML]="module.duree.timestamp *1000 | date: 'HH:mm'" class="duree"></div>
+            <div [innerHTML]="module.description | html"></div>
+          </div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

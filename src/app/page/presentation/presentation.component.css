@@ -1,32 +1,25 @@
-.container-fluid{
-    background-color: white;
-}
 .mt-5, .my-5 {
     margin-top: 0 !important;
 }
 .mb-5, .my-5 {
     margin-bottom: 0 !important;
 }
-.description{
-    margin-bottom: 10px !important;
+.bg-grey{
+    background-color: #e5e5e5;
 }
 .bio-title{
     color: #A60815;
     margin-bottom: 10px;
+    font-size: 30px;
 }
-
 .bio-picture{
     height: 350px;
     width: 198px;
-}
-.pressbook{
-    margin-bottom: 10px;
 }
 .icon{
     height: 50px;
     width: 50px;
 }
-
 .bio-link{
     color: black;
 }

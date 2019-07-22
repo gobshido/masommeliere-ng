@@ -40,7 +40,10 @@ export class TitleService {
               return acc + TitleService.ucFirst(frag);
             });
           }
-        })
-    );
+        }))
+        .subscribe((pathString) => {
+          this.titleService.getTitle();
+          this.currentTitle = pathString;
+        });
   }
 }

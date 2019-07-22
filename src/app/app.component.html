@@ -1,43 +1,70 @@
 <mat-sidenav-container class="main-container">
   <mat-sidenav class="sidenav" mode="over" [(opened)]="opened" #sidenav>
-    <nav>
+    <span class="d-flex justify-content-end close-menu">
+      <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </span>
+    <nav class="d-flex align-items-center justify-content-center" style="height: 80vh;">
       <mat-nav-list>
         <a routerLink="/accueil"
            routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Accueil</strong></span>
+          <span>Accueil</span>
         </a>
         <a routerLink="/presentation"
            routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Présentation</strong></span>
+          <span>Présentation</span>
         </a>
-        <a routerLink="/particulier"
-           routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Particuliers</strong></span>
-        </a>
-        <a routerLink="/professionnel"
-           routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Professionnels</strong></span>
-        </a>
+        <div class="dropdown">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Particuliers</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a routerLink="/particulier"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Initiation</a>
+            <a routerLink="/personal-wine-shopper"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Personal Wine Shopper</a>
+            <a routerLink="/gestion-cave"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Gestion de cave</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Professionnels</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+            <a routerLink="/professionnel"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Initiation</a>
+            <a routerLink="/team-building"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Team Building</a>
+            <a routerLink="/wine-club"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Wine club</a>
+            <a routerLink="/personal-wine-shopper"
+               routerLinkActive="active" mat-list-item (click)="sidenav.close()" class="dropdown-item">Personal Wine Shopper</a>
+          </div>
+        </div>
         <a routerLink="/actualite"
            routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Actualités</strong></span>
+          <span>Actualités</span>
         </a>
         <a routerLink="/contact"
            routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-          <span><strong>Contact</strong></span>
+          <span>Contact</span>
         </a>
       </mat-nav-list>
     </nav>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar role="heading" class="background">
-      <img src="../assets/images/logo-ma-sommeliere.jpg" class="logo">
+    <mat-toolbar role="heading" class="bg-color">
+      <img src="../assets/images/logo-ma-sommeliere.png" class="logo">
       <span class="remaining-space"></span>
       <button mat-button class="icon-menu" (click)="sidenav.toggle()">
         <mat-icon mat-list-icon class="size-icon">menu</mat-icon>
       </button>
-      <footer class="container-fluid fixed-bottom background">
-        <div class="row text-center align-items-center d-flex flex-wrap">
+      <footer class="container-fluid fixed-bottom">
+        <div class="row text-center align-items-center d-flex flex-wrap footer-size">
           <div class="col-sm-4 col-8">
             <a href="" target="_blank" class="text-decoration-none text-dark">Mentions légales</a>
           </div>
