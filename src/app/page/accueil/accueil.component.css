@@ -2,6 +2,8 @@
     background-image: url("../../../assets/images/cave-degustation-noir.jpg");
     background-position: center;
     background-size: cover;
+    position: relative;
+    top: 100px;
 }
 .home-title{
     color: #A60815;

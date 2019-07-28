@@ -1,3 +1,22 @@
-<p>
-  actualite works!
-</p>
+<div class="bg-grey">
+  <div class="d-flex justify-content-center title">{{titleService.currentTitle}}</div>
+  <div class="row justify-content-center">
+    <div *ngFor="let actualite of actualites">
+      <div class="col initiation">
+        <span [innerHTML]="actualite.titre"></span>
+        <span [innerHTML]="actualite.description"></span>
+        <span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span>
+        <span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span>
+        <span [innerHTML]="actualite.lieu"></span>
+      </div>
+<!--          <div *ngFor="let module of actualites.modules" class="text-center">-->
+<!--            <div class="cadre">-->
+<!--              <div [innerHTML]="module.nom | html" class="modName"></div>-->
+<!--              <div [innerHTML]="module.duree.timestamp *1000 | date: 'HH:mm'" class="duree"></div>-->
+<!--              <div [innerHTML]="module.description | html"></div>-->
+<!--            </div>-->
+<!--            <div class="spacer"></div>-->
+    </div>
+  </div>
+</div>
+

@@ -1,14 +1,24 @@
+@media screen and (max-width: 576px) {
+    .main-container{
+        height: 86vh !important;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 1440px) {
+    .main-container{
+        height: 87vh !important;
+    }
+}
 .main-container{
     height: 88vh;
-}
-button:focus{
-    outline: none;
 }
 mat-sidenav {
     min-width: 100%;
     background-image: url("../assets/images/Background-sidenav.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+button:focus{
+    outline: none;
 }
 .close-menu{
     color: white;
@@ -17,6 +27,7 @@ mat-sidenav {
     position: relative;
 }
 nav mat-nav-list a {
+    text-align: center;
     color: white;
     display: flex;
     justify-content: center;
@@ -24,51 +35,48 @@ nav mat-nav-list a {
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
+    height: auto;
 }
-mat-toolbar{
+.background-prestaMenu{
+    background: rgba(255,255,255,0.3);
+}
+.prestaMenu{
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+.bg-color{
+    background-color: white;
     height: 100px;
 }
-.dropdown-toggle::after{
-    margin-top: inherit;
-}
-.dropdown-menu{
-    background-color: #050505;
-}
-.dropdown-item.active{
-    background-color: transparent;
-}
-.btn:focus{
-    box-shadow:none;
-}
-.bg-grey{
-    background-color: #e5e5e5;
-}
-.size-icon{
-    font-size: 40px;
-}
-
 .logo {
     height: 100px;
     width: 200px;
     margin-bottom: 3px;
 }
-.bg-color{
-    background-color: white;
-}
 .remaining-space {
     flex: 1 1 auto;
 }
-
 .icon-menu{
     color: #A60815;
 }
+.size-icon{
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
 .footer-size{
-    height: 9vh;
     font-size: 16px;
+}
+.logo-footer{
+    vertical-align: middle;
 }
 .icon-footer{
     height: 50px;
     width: 50px;
 }
-
-
+.bg-grey{
+    background-color: #e5e5e5;
+    height: calc(100vh - 100px);
+    top: 100px;
+    position: relative;
+}

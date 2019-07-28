@@ -11,13 +11,6 @@ h1{
     text-align: center;
     padding-top: 20px;
 }
-h2{
-    font-size: 25px;
-    color: #A60815;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
 .align-card{
     text-align: -webkit-center;
     display: flex;
@@ -31,7 +24,7 @@ h2{
     }
 }
 .mat-card{
-    max-width: 300px;
+    width: 300px;
     background: white;
     margin: 20px;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 3px 1px 0 rgba(0,0,0,.14), -3px 0 3px 0 rgba(0,0,0,.12);
@@ -39,7 +32,6 @@ h2{
 mat-card-content{
     color:black;
 }
-
 .prestaName{
     color: #A60815;
     margin-bottom: 20px;
@@ -49,4 +41,32 @@ mat-card-content{
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 600;
+}
+.title{
+    font-size: 30px;
+    color: #A60815;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.modName{
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: cursive;
+}
+.duree{
+    margin-bottom: 20px;
+}
+.notInitiation{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 64vh;
+    padding: 10px;
+}
+.devis{
+    font-size: 10px;
+    bottom: 90px;
+    position: fixed;
 }

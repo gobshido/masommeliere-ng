@@ -6,15 +6,17 @@
 }
 .bg-grey{
     background-color: #e5e5e5;
+    top: 100px;
+    position: relative;
 }
+
 .bio-title{
     color: #A60815;
     margin-bottom: 10px;
     font-size: 30px;
 }
 .bio-picture{
-    height: 350px;
-    width: 198px;
+    height: 100%;
 }
 .icon{
     height: 50px;

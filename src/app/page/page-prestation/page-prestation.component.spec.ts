@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InvitationVoyageComponent } from './invitation-voyage.component';
+import { PagePrestationComponent } from './page-prestation.component';
 
-describe('InvitationVoyageComponent', () => {
-  let component: InvitationVoyageComponent;
-  let fixture: ComponentFixture<InvitationVoyageComponent>;
+describe('PagePrestationComponent', () => {
+  let component: PagePrestationComponent;
+  let fixture: ComponentFixture<PagePrestationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InvitationVoyageComponent ]
+      declarations: [ PagePrestationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InvitationVoyageComponent);
+    fixture = TestBed.createComponent(PagePrestationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

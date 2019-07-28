@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { ImagepathPipe } from './pipe/imagepath.pipe';
-import { MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule,
-  MatButtonModule, MatExpansionModule, MatListModule } from '@angular/material';
+import {
+    MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule,
+    MatButtonModule, MatExpansionModule, MatListModule, MatTableModule, MatCardModule
+} from '@angular/material';
 
 import { PresentationComponent } from './page/presentation/presentation.component';
 import { ParticulierComponent } from './page/particulier/particulier.component';
@@ -18,62 +18,42 @@ import { ActualiteComponent } from './page/actualite/actualite.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { AccueilComponent } from './page/accueil/accueil.component';
 import { ImageComponent } from './component/image/image.component';
+import { PagePrestationComponent } from './page/page-prestation/page-prestation.component';
+
 import { HtmlPipe } from './pipe/html.pipe';
-import { WineShopperComponent } from './page/wine-shopper/wine-shopper.component';
-import { CaveComponent } from './page/cave/cave.component';
-import { BordelaisEleganceComponent } from './page/bordelais-elegance/bordelais-elegance.component';
-import { IntensementBordeauxComponent } from './page/intensement-bordeaux/intensement-bordeaux.component';
-import { GrandeBoucleComponent } from './page/grande-boucle/grande-boucle.component';
-import { TeamBuildingComponent } from './page/team-building/team-building.component';
-import { WineClubComponent } from './page/wine-club/wine-club.component';
-import { InvitationVoyageComponent } from './page/invitation-voyage/invitation-voyage.component';
+import { TargetPriceFilterPipe } from './pipe/target-price-filter.pipe';
+import { CibleFilterPipe } from './pipe/cible-filter.pipe';
+import { CategoryFilterPipe } from './pipe/category-filter.pipe';
+import { ImagepathPipe } from './pipe/imagepath.pipe';
 
 const appRoutes: Routes = [
-  { path: '',
-    redirectTo: '/accueil',
-    pathMatch: 'full'},
   { path: 'accueil',
     component: AccueilComponent,
     data : { title: 'Accueil'}},
-  { path: 'presentation',
-    component: PresentationComponent,
-    data : { title: 'Presentation'}},
-  { path: 'particulier',
-    component: ParticulierComponent,
-    data : { title: 'Initiation pour les particuliers'}},
-  { path: 'professionnel',
-    component: ProfessionnelComponent,
-    data : { title: 'Initiation pour les professionnels'}},
   { path: 'actualite',
     component: ActualiteComponent,
     data : { title: 'Actualités'}},
   { path: 'contact',
     component: ContactComponent,
     data : { title: 'Contact'}},
-  { path: 'personal-wine-shopper',
-    component: WineShopperComponent,
-    data : { title: 'Personal Wine Shopper'}},
-  { path: 'bordelais-elegance',
-    component: BordelaisEleganceComponent,
-    data : { title: 'Le Bordelais et son élégance'}},
-  { path: 'intensement-bordeaux',
-    component: IntensementBordeauxComponent,
-    data : { title: 'Intensément Bordeaux'}},
-  { path: 'grande-boucle',
-    component: GrandeBoucleComponent,
-    data : { title: 'La Grande Boucle'}},
-  { path: 'invitation-voyage',
-    component: InvitationVoyageComponent,
-    data : { title: 'Invitation au voyage'}},
-  { path: 'gestion-cave',
-    component: CaveComponent,
-    data : { title: 'Expertise et gestion de cave'}},
-  { path: 'team-building',
-    component: TeamBuildingComponent,
-    data : { title: 'Into the Wine !'}},
-  { path: 'wine-club',
-    component: WineClubComponent,
-    data : { title: 'Wine club'}},
+  { path: 'presentation',
+    component: PresentationComponent,
+    data : { title: 'Presentation'}},
+  { path: 'particulier',
+    component: ParticulierComponent,
+    data : { title: 'Initiation'}},
+  { path: 'professionnel',
+    component: ProfessionnelComponent,
+    data : { title: 'Initiation'}},
+  { path: 'page_prestation/:id',
+    component: PagePrestationComponent,
+    data : { title: 'Prestation'}},
+  { path: '',
+    redirectTo: '/accueil',
+    pathMatch: 'full'},
+  { path: '**',
+    component: AccueilComponent,
+    data : { title: 'Accueil'}},
 ];
 
 @NgModule({
@@ -88,30 +68,28 @@ const appRoutes: Routes = [
     AccueilComponent,
     ImageComponent,
     HtmlPipe,
-    WineShopperComponent,
-    CaveComponent,
-    BordelaisEleganceComponent,
-    IntensementBordeauxComponent,
-    GrandeBoucleComponent,
-    TeamBuildingComponent,
-    WineClubComponent,
-    InvitationVoyageComponent,
+    PagePrestationComponent,
+    TargetPriceFilterPipe,
+    CibleFilterPipe,
+    CategoryFilterPipe,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatListModule,
-    MatExpansionModule,
-    MatCheckboxModule,
-    FlexLayoutModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatListModule,
+        MatExpansionModule,
+        MatCheckboxModule,
+        FlexLayoutModule,
+        HttpClientModule,
+        MatTableModule,
+        MatCardModule,
+        RouterModule.forRoot(appRoutes)
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,61 +1,25 @@
 <div class="bg-grey">
-    <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Initiation
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/bordelais-elegance">Le Bordelais et son élégance</a>
-                            <a class="dropdown-item" href="/intensement-bordeaux">Intensément Bordeaux</a>
-                            <a class="dropdown-item" href="/grande-boucle">La Grande Boucle</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <h1 class="d-flex justify-content-center title">{{titleService.currentTitle}}</h1>
-    <div class="row justify-content-center">
-        <div *ngFor="let prestation of prestations">
-            <div *ngIf="prestation.categorie.nom == 'Initiation'">
-                <div *ngFor="let cible of prestation.cibles">
-                    <div *ngIf="cible.nom == 'Particuliers'">
-                        <div class="col-4 initiation">
-                            <div class="d-flex justify-content-center">
-                                <div [innerHTML]="prestation.nom | html" class="prestaName"></div>
+    <h1>{{titleService.currentTitle}}</h1>
+    <h2>Particuliers</h2>
+    <div class="align-card">
+        <span *ngFor="let prestation of prestations | cibleFilter: 'Particuliers' | categoryFilter: 'Initiation'">
+            <mat-card class="d-flex flex-column flex-wrap col-3">
+                <a [routerLink]="['/page_prestation', prestation.id]"
+                   routerLinkActive="active" class="text-center text-decoration-none">
+                    <mat-card-title class="prestaName">
+                        {{prestation.nom}}
+                    </mat-card-title>
+                    <mat-card-content>
+                        <div *ngFor="let prix of prestation.prices |targetPriceFilter:0">
+                            <div class="text-center prix" >
+                                <span [innerHTML]="prix.value "></span>
+                                <span [innerHTML]=" prix.devise + ' / personne'"></span>
                             </div>
-<!--                            <div *ngFor="let prix of prestation.prices">-->
-<!--                                <div *ngFor="let targetprice of prix.targetPrices">-->
-<!--                                    <div *ngIf="targetprice.value == 0">-->
-<!--                                        <span [innerHTML]="prix.value"></span>-->
-<!--                                        <span [innerHTML]="prix.devise + ' / personne'"></span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-                            <div *ngFor="let targetprice of targetPrices">
-                                <div *ngIf="targetprice.value == '10'">
-                                    <div *ngFor="let prix of prestation.prices">
-                                        <div *ngIf="prix.isDesactivated == '0'" class="text-center prix">
-                                            <span [innerHTML]="prix.value"></span>
-                                            <span [innerHTML]="prix.devise + ' / personne'"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div [innerHTML]="prestation.description | html" class="text-center"></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div [innerHTML]="prestation.description | html" class="text-center"></div>
+                    </mat-card-content>
+                </a>
+            </mat-card>
+        </span>
     </div>
 </div>

@@ -12,7 +12,7 @@ export class PrestationService {
   getPrestations() {
     return this.http.get(`${this.uri}`);
   }
-  getPrestation(id: string) {
+  getPrestation(id: number) {
     return this.http.get(`${this.uri}/${id}`);
   }
 }

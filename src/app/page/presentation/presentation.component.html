@@ -3,12 +3,14 @@
     <h1 class="col-12 bio-title">PLUS QU'UN METIER, UNE PASSION</h1>
   </div>
   <div class="row align-content-center my-5 description" *ngFor="let contactuser of contactusers">
-    <div class="col-sm-2 col-0"></div>
-    <img *ngIf="contactuser.image"
-         src="{{ contactuser.image.imgpath | imagepath }}" class="col-sm-4 col-12 mb-2 bio-picture"/>
-    <div [innerHTML]="contactuser.presentation | html" class="col-sm-4 col-12 d-flex flex-column justify-content-center">
+    <div class="col-lg-2 col-0"></div>
+<!--    <div class="">-->
+      <img *ngIf="contactuser.image"
+           src="{{ contactuser.image.imgpath | imagepath }}" class="col-lg-4 col-12 mb-2 bio-picture"/>
+<!--    </div>-->
+    <div [innerHTML]="contactuser.presentation | html" class="col-lg-4 col-12 d-flex flex-column justify-content-center">
     </div>
-    <div class="col-sm-2 col-0"></div>
+    <div class="col-lg-2 col-0"></div>
   </div>
   <div class="row justify-content-center text-center pressbook">
     <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
