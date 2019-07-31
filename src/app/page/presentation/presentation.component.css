@@ -25,3 +25,10 @@
 .bio-link{
     color: black;
 }
+
+.description, .pressbook {
+    margin-top: 20px;
+}
+.description {
+    min-height: 400px;
+}

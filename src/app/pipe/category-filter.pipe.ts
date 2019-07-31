@@ -7,9 +7,12 @@ import {Prestation} from '../class/prestation';
 export class CategoryFilterPipe implements PipeTransform {
 
   transform(prestations: Prestation[], targetName?: string): any {
-    return prestations.filter((prestation: Prestation) => {
-      const name = prestation.categorie.nom;
-      return name === targetName;
+    if (prestations) {
+      return prestations.filter((prestation: Prestation) => {
+        const name = prestation.categorie.nom;
+        return name === targetName;
       });
+    }
+    return prestations;
   }
 }

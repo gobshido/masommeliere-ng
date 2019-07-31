@@ -1,22 +1,18 @@
 <div class="bg-grey">
-  <div class="d-flex justify-content-center title">{{titleService.currentTitle}}</div>
-  <div class="row justify-content-center">
-    <div *ngFor="let actualite of actualites">
-      <div class="col initiation">
-        <span [innerHTML]="actualite.titre"></span>
-        <span [innerHTML]="actualite.description"></span>
-        <span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span>
-        <span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span>
-        <span [innerHTML]="actualite.lieu"></span>
-      </div>
-<!--          <div *ngFor="let module of actualites.modules" class="text-center">-->
-<!--            <div class="cadre">-->
-<!--              <div [innerHTML]="module.nom | html" class="modName"></div>-->
-<!--              <div [innerHTML]="module.duree.timestamp *1000 | date: 'HH:mm'" class="duree"></div>-->
-<!--              <div [innerHTML]="module.description | html"></div>-->
-<!--            </div>-->
-<!--            <div class="spacer"></div>-->
+    <h1 class="title">{{titleService.currentTitle}}</h1>
+    <div class="row">
+        <span *ngFor="let actualite of actualites" class="actu">
+        <div class="col-6 text-center">
+            <img *ngIf="actualite.image"
+            src="{{ actualite.image.imgpath | imagepath }}" class="picture"/>
+        </div>
+        <div class="col-6 actuText">
+            <div [innerHTML]="actualite.titre" class="textDesc textTitle"></div>
+            <div [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'" class="textDesc"></div>
+            <div [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'" class="textDesc"></div>
+            <div [innerHTML]="actualite.lieu" class="textDesc"></div>
+            <div [innerHTML]="actualite.description" class="textDesc"></div>
+        </div>
+        </span>
     </div>
-  </div>
 </div>
-

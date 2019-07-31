@@ -11,6 +11,12 @@ h1{
     text-align: center;
     padding-top: 20px;
 }
+.btn-back {
+    color: white;
+    font-weight: 600;
+    border: solid 1px #e5e5e5;
+    background: #A60815;
+}
 .align-card{
     text-align: -webkit-center;
     display: flex;

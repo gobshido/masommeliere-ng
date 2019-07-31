@@ -1,0 +1,45 @@
+.bg-grey{
+    background-color: #e5e5e5;
+    top: 100px;
+    position: relative;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+h1{
+    font-size: 30px;
+    color: #A60815;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.actu{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.actuText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.textDesc{
+    margin: 10px;
+}
+.textTitle{
+    font-weight: 600;
+    font-size: 20px;
+}
+.picture{
+    max-height: 300px;
+}
+.title{
+    font-size: 30px;
+    color: #A60815;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+

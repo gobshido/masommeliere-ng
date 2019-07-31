@@ -3,7 +3,7 @@
     <h2>Particuliers</h2>
     <div class="align-card">
         <span *ngFor="let prestation of prestations | cibleFilter: 'Particuliers' | categoryFilter: 'Initiation'">
-            <mat-card class="d-flex flex-column flex-wrap col-3">
+            <mat-card class="d-flex flex-column flex-wrap">
                 <a [routerLink]="['/page_prestation', prestation.id]"
                    routerLinkActive="active" class="text-center text-decoration-none">
                     <mat-card-title class="prestaName">
@@ -16,7 +16,7 @@
                                 <span [innerHTML]=" prix.devise + ' / personne'"></span>
                             </div>
                         </div>
-                        <div [innerHTML]="prestation.description | html" class="text-center"></div>
+                        <div [innerHTML]="prestation.description" class="text-center"></div>
                     </mat-card-content>
                 </a>
             </mat-card>

@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {Prestation} from '../../class/prestation';
 import {PrestationService} from '../../service/prestation.service';
 import {TitleService} from '../../service/title.service';
+import {Location} from '@angular/common';
 
 @Component({
     selector: 'app-page-prestation',
@@ -16,6 +17,7 @@ export class PagePrestationComponent implements OnInit {
                 private router: Router,
                 private prestationServ: PrestationService,
                 private titleService: TitleService,
+                private location: Location
     ) {  }
 
     ngOnInit() {
@@ -27,5 +29,8 @@ export class PagePrestationComponent implements OnInit {
                     });
             });
         this.titleService.init();
+    }
+    back() {
+        this.location.back();
     }
 }

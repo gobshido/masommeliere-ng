@@ -25,6 +25,7 @@ import { TargetPriceFilterPipe } from './pipe/target-price-filter.pipe';
 import { CibleFilterPipe } from './pipe/cible-filter.pipe';
 import { CategoryFilterPipe } from './pipe/category-filter.pipe';
 import { ImagepathPipe } from './pipe/imagepath.pipe';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'accueil',
@@ -88,7 +89,8 @@ const appRoutes: Routes = [
         HttpClientModule,
         MatTableModule,
         MatCardModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        MatProgressSpinnerModule
     ],
   providers: [],
   bootstrap: [AppComponent]
