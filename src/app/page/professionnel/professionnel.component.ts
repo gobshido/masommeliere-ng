@@ -16,6 +16,7 @@ export class ProfessionnelComponent implements OnInit {
   prestations: Prestation[];
   prices: Prix[];
   targetPrices: Targetprice[];
+  private ready: boolean;
 
   constructor(
       private prestationServ: PrestationService,
@@ -28,6 +29,7 @@ export class ProfessionnelComponent implements OnInit {
     this.prestationServ.getPrestations()
         .subscribe((prestations: Prestation[]) => {
           this.prestations = prestations;
+          this.ready = true;
         });
     this.titleService.init();
     this.priceService.getPrices()

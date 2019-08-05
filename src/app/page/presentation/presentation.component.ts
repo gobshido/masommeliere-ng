@@ -10,14 +10,15 @@ import { ContactuserService } from '../../service/contactuser.service';
 export class PresentationComponent implements OnInit {
   contactusers: Contactuser[];
   private ready: boolean;
+
   constructor(private contactServ: ContactuserService) { }
 
   ngOnInit() {
-    this.contactServ.getContactusers()
-        .subscribe((contactusers: Contactuser[]) => {
-          this.contactusers = contactusers;
-          this.ready = true;
-        });
+        this.contactServ.getContactusers()
+            .subscribe((contactusers: Contactuser[]) => {
+                this.contactusers = contactusers;
+                this.ready = true;
+            });
   }
 
 }

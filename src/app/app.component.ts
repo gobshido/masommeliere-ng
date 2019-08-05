@@ -27,10 +27,6 @@ export class AppComponent implements OnInit {
   togglePro() {
     this.showPro = !this.showPro;
   }
-  resetToggle() {
-    this.showPart = false;
-    this.showPro = false;
-  }
 
   ngOnInit(): void {
     this.titleservice.init();

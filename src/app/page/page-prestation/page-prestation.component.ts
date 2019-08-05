@@ -12,6 +12,7 @@ import {Location} from '@angular/common';
 })
 export class PagePrestationComponent implements OnInit {
     prestation: Prestation;
+    private ready: boolean;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
@@ -26,6 +27,7 @@ export class PagePrestationComponent implements OnInit {
                 this.prestationServ.getPrestation(params.id)
                     .subscribe((prestation: Prestation) => {
                         this.prestation = prestation;
+                        this.ready = true;
                     });
             });
         this.titleService.init();

@@ -1,40 +1,39 @@
 <div class="bg-grey">
-    <h1>{{prestation.nom}}</h1>
-    <div *ngFor="let prix of prestation.prices">
-        <div *ngIf="prix.isDesactivated == false" class="text-center prix" >
-            <div *ngFor="let targetprice of prix.targetprices">
-                {{targetprice.nom.toUpperCase()}}
-            </div>
-            <span [innerHTML]="prix.value"></span>
-            <span [innerHTML]="prix.devise + ' / personne'"></span>
+    <span *ngIf="prestation">
+        <h1>{{prestation.nom}}</h1>
+        <div class="d-flex justify-content-center">
+            <mat-spinner *ngIf="!ready"></mat-spinner>
         </div>
-    </div>
-    <div *ngFor="let module of prestation.modules">
-        <div class="align-card">
-            <mat-card class="d-flex flex-column flex-wrap">
-                <mat-card-content>
-                    <mat-card-title class="prestaName">
-                        <div [innerHTML]="module.nom" class="modName"></div>
-                    </mat-card-title>
-                    <div class="duree">
-                        <span [innerHTML]="module.duree.timestamp *1000 | date: 'HH'"></span>
-                        h
-                        <span [innerHTML]="module.duree.timestamp *1000 | date: 'mm'"></span>
+        <div *ngIf="ready">
+            <div *ngFor="let prix of prestation.prices">
+                <div *ngIf="prix.isDesactivated == false" class="text-center prix" >
+                    <div *ngFor="let targetprice of prix.targetprices">
+                        {{targetprice.nom.toUpperCase()}}
                     </div>
-                    <div [innerHTML]="module.description"></div>
-                </mat-card-content>
-            </mat-card>
+                    <span [innerHTML]="prix.value"></span>
+                    <span [innerHTML]="prix.devise + ' / personne'"></span>
+                </div>
+            </div>
+            <div *ngFor="let module of prestation.modules">
+                <div class="align-card">
+                    <mat-card class="d-flex flex-column flex-wrap">
+                        <mat-card-content>
+                            <mat-card-title class="prestaName">
+                                <div [innerHTML]="module.nom" class="modName"></div>
+                            </mat-card-title>
+                            <div class="duree">
+                                <span [innerHTML]="module.duree.timestamp *1000 | date: 'HH'"></span>
+                                h
+                                <span [innerHTML]="module.duree.timestamp *1000 | date: 'mm'"></span>
+                            </div>
+                            <div [innerHTML]="module.description |html"></div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
         </div>
-    </div>
-    <div *ngIf="prestation.categorie.nom != 'Initiation'"
-         [innerHTML]="prestation.description" class="notInitiation"></div>
-    <div *ngIf="prestation.nom == 'Gestion de cave'" class="devis">*Ce tarif n'inclue pas la commission de 15% sur la vente de vos bouteilles.</div>
-    <div *ngIf="prestation.nom == 'Wine Club'" class="devis">*L'adhésion ne comprend pas les sorties</div>
-    <div *ngIf="prestation.nom == 'Personal Wine Shopper'" class="devis">
-        <div>*Ces tarifs n'incluent pas le prix et la quantité des vins à commander et les frais de livraison.</div>
-        <div>Ma Sommelière s'efforce de vous garantir des tarifs avantageux ainsi qu'une étude approfondie d'offres promotionnelles.</div>
-    </div>
-    <div class="d-flex justify-content-center">
+    </span>
+    <div class="d-flex justify-content-end">
         <button role="button" class="btn btn-back" (click)="back()">Retour</button>
     </div>
 </div>

@@ -13,6 +13,7 @@ import {Actualite} from '../../class/actualite';
 export class ActualiteComponent implements OnInit {
   modules: Module[];
   actualites: Actualite[];
+  private ready: boolean;
 
   constructor(
       private moduleService: ModuleService,
@@ -24,6 +25,7 @@ export class ActualiteComponent implements OnInit {
     this.actualiteService.getActualites()
         .subscribe((actualites: Actualite[]) => {
           this.actualites = actualites;
+          this.ready = true;
         });
     this.moduleService.getModules()
         .subscribe((modules: Module[]) => {

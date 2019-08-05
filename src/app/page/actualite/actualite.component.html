@@ -1,6 +1,9 @@
 <div class="bg-grey">
     <h1 class="title">{{titleService.currentTitle}}</h1>
-    <div class="row">
+    <div class="d-flex justify-content-center">
+        <mat-spinner *ngIf="!ready"></mat-spinner>
+    </div>
+    <div class="row" *ngIf="ready">
         <span *ngFor="let actualite of actualites" class="actu">
         <div class="col-6 text-center">
             <img *ngIf="actualite.image"

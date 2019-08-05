@@ -10,7 +10,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./particulier.component.css']
 })
 export class ParticulierComponent implements OnInit {
-  prestations: Prestation[];
+    prestations: Prestation[];
+    private ready: boolean;
 
   constructor(
       private router: Router,
@@ -22,6 +23,7 @@ export class ParticulierComponent implements OnInit {
         this.prestationServ.getPrestations()
             .subscribe((prestations: Prestation[]) => {
               this.prestations = prestations;
+              this.ready = true;
             });
         this.titleService.init();
   }

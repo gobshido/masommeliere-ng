@@ -1,10 +1,13 @@
 <div class="bg-grey">
     <h1>{{titleService.currentTitle}}</h1>
     <h2>Particuliers</h2>
-    <div class="align-card">
+    <div class="d-flex justify-content-center">
+        <mat-spinner *ngIf="!ready"></mat-spinner>
+    </div>
+    <div class="align-card" *ngIf="ready">
         <span *ngFor="let prestation of prestations | cibleFilter: 'Particuliers' | categoryFilter: 'Initiation'">
             <mat-card class="d-flex flex-column flex-wrap">
-                <a [routerLink]="['/page_prestation', prestation.id]"
+                <a routerLink="/page_prestation/{{ prestation.id }}"
                    routerLinkActive="active" class="text-center text-decoration-none">
                     <mat-card-title class="prestaName">
                         {{prestation.nom}}

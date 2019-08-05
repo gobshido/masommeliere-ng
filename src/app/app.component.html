@@ -15,7 +15,6 @@
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Présentation</span>
                 </a>
-
                 <a mat-list-item (click)="togglePart()">
                     <span>Particuliers</span>
                     <mat-icon *ngIf="!showPart">chevron_right</mat-icon>
@@ -28,7 +27,7 @@
                         <span>Initiations</span>
                     </a>
                     <a *ngFor="let prestation of prestations | cibleFilter: 'Particuliers'" mat-list-item
-                       [routerLink]="['/page_prestation', prestation.id]"
+                       routerLink="/page_prestation/{{ prestation.id }}"
                         routerLinkActive="active" (click)="sidenav.close()"
                        class="prestaMenu">
                         <span *ngIf ="prestation.categorie.nom != 'Initiation'">{{ prestation.nom }}</span>
@@ -53,14 +52,9 @@
                         <span *ngIf ="prestation.categorie.nom != 'Initiation'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
-
                 <a routerLink="/actualite"
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Actualités</span>
-                </a>
-                <a routerLink="/contact"
-                   routerLinkActive="active" mat-list-item (click)="sidenav.close()">
-                    <span>Contact</span>
                 </a>
             </mat-nav-list>
         </nav>
@@ -76,8 +70,10 @@
         <footer class="container-fluid fixed-bottom">
             <table class="footer-size">
                 <td class="col">
-                    <tr><a href="" target="_blank" class="text-decoration-none text-dark">Mentions légales</a></tr>
-                    <tr><a href="" target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a></tr>
+                    <tr><a routerLink="/mentions_legales" routerLinkActive="active"
+                           target="_blank" class="text-decoration-none text-dark">Mentions légales</a></tr>
+                    <tr><a routerLink="/politique_confidentialite" routerLinkActive="active"
+                           target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a></tr>
                 </td>
                 <td class="logo-footer col">
                     <tr rowspan="2">

@@ -1,6 +1,6 @@
 .bg-grey{
     background-color: #e5e5e5;
-    top: 100px;
+    top: 80px;
     position: relative;
 }
 h1{
@@ -68,11 +68,11 @@ mat-card-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 64vh;
+    height: 61vh;
     padding: 10px;
 }
 .devis{
     font-size: 10px;
-    bottom: 90px;
+    bottom: 115px;
     position: fixed;
 }

@@ -19,6 +19,8 @@ import { ContactComponent } from './page/contact/contact.component';
 import { AccueilComponent } from './page/accueil/accueil.component';
 import { ImageComponent } from './component/image/image.component';
 import { PagePrestationComponent } from './page/page-prestation/page-prestation.component';
+import { MentionsLegalesComponent } from './page/mentions-legales/mentions-legales.component';
+import { PolitiqueConfidentialiteComponent } from './page/politique-confidentialite/politique-confidentialite.component';
 
 import { HtmlPipe } from './pipe/html.pipe';
 import { TargetPriceFilterPipe } from './pipe/target-price-filter.pipe';
@@ -46,6 +48,12 @@ const appRoutes: Routes = [
   { path: 'professionnel',
     component: ProfessionnelComponent,
     data : { title: 'Initiation'}},
+    { path: 'mentions_legales',
+    component: MentionsLegalesComponent,
+    data : { title: 'Mentions Légales'}},
+    { path: 'politique_confidentialite',
+    component: PolitiqueConfidentialiteComponent,
+    data : { title: 'Politique de confidentialité'}},
   { path: 'page_prestation/:id',
     component: PagePrestationComponent,
     data : { title: 'Prestation'}},
@@ -73,6 +81,8 @@ const appRoutes: Routes = [
     TargetPriceFilterPipe,
     CibleFilterPipe,
     CategoryFilterPipe,
+    MentionsLegalesComponent,
+    PolitiqueConfidentialiteComponent,
   ],
     imports: [
         BrowserModule,

@@ -1,51 +1,51 @@
 <div class="container-fluid bg-grey">
-  <div class="row text-center align-content-center mt-5">
-    <h1 class="col-12 bio-title">PLUS QU'UN METIER, UNE PASSION</h1>
-  </div>
-  <div class="row justify-content-center align-content-center my-5 description">
-    <mat-spinner *ngIf="!ready"></mat-spinner>
-    <div class="col-12 mt-3" *ngIf="ready">
-      <div class="row" *ngFor="let contactuser of contactusers">
-        <div class="col-lg-2 col-0"></div>
-    <!--    <div class="">-->
-          <img *ngIf="contactuser.image"
-               src="{{ contactuser.image.imgpath | imagepath }}" class="col-lg-4 col-12 mb-2 bio-picture"/>
-    <!--    </div>-->
-        <div class="col-lg-4 col-12 d-flex flex-column justify-content-center"
-             [innerHTML]="contactuser.presentation">
+    <div class="row text-center align-content-center mt-5">
+        <h1 class="col-12 bio-title">PLUS QU'UN METIER, UNE PASSION</h1>
+    </div>
+    <div class="row justify-content-center align-content-center my-5 description">
+        <mat-spinner *ngIf="!ready"></mat-spinner>
+        <div class="col-12 mt-3" *ngIf="ready">
+            <div class="row" *ngFor="let contactuser of contactusers">
+                <div class="col-lg-2 col-0"></div>
+                <!--    <div class="">-->
+                <img *ngIf="contactuser.image"
+                     src="{{ contactuser.image.imgpath | imagepath }}" class="col-lg-4 col-12 mb-2 bio-picture"/>
+                <!--    </div>-->
+                <div class="col-lg-4 col-12 d-flex flex-column justify-content-center"
+                     [innerHTML]="contactuser.presentation">
+                </div>
+                <div class="col-lg-2 col-0"></div>
+            </div>
         </div>
-        <div class="col-lg-2 col-0"></div>
-      </div>
     </div>
-  </div>
-  <div class="row justify-content-center text-center pressbook">
-    <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
-    <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de sommelière :</div>
-  </div>
-  <div class="row mb-5">
-    <div class="col-sm-3 col-12 text-center">
-      <a href="" class="text-decoration-none bio-link">
-        <img src="../../../assets/images/instagram.jpg" class="icon">
-        <p>Comment je suis devenue sommelière</p>
-      </a>
+    <div class="row justify-content-center text-center pressbook">
+        <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
+        <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de sommelière :</div>
     </div>
-    <div class="col-sm-3 col-12 text-center">
-      <a href="" class="text-decoration-none bio-link">
-        <img src="../../../assets/images/instagram.jpg" class="icon">
-        <p>Dossier de presse le 7</p>
-      </a>
+    <div class="row mb-5">
+        <div class="col-sm-3 col-12 text-center">
+            <a href="https://www.letudiant.fr/metiers/metiers---portraits-de-pros/lucie-31-ans-comment-je-suis-devenue-sommeliere.html" target="_blank" class="text-decoration-none bio-link">
+                <img src="../../../assets/images/letudiant.jpg" class="icon">
+                <p>Comment je suis devenue sommelière</p>
+            </a>
+        </div>
+        <div class="col-sm-3 col-12 text-center">
+            <a href="http://www.le7restaurant.com/img/dossier-de-presse-le-7.pdf" target="_blank" class="text-decoration-none bio-link">
+                <img src="../../../assets/images/vignette-le7.png" class="icon">
+                <p>Dossier de presse le 7</p>
+            </a>
+        </div>
+        <div class="col-sm-3 col-12 text-center">
+            <a href="http://madame.lefigaro.fr/cuisine/femmes-sommelieres-paz-levinson-virginie-routis-estelle-touzet-160718-149761" target="_blank" class="text-decoration-none bio-link">
+                <img src="../../../assets/images/aJYgNHF_l4zfigaro.png" class="icon">
+                <p>Sommelières d'exception</p>
+            </a>
+        </div>
+        <div class="col-sm-3 col-12 text-center">
+            <a href="https://www.familia-brasserie.fr/pdf/DOSSIER-DE-PRESSE-HDB-FAMILIA.pdf" target="_blank" class="text-decoration-none bio-link">
+                <img src="../../../assets/images/familia.png" class="icon">
+                <p>Dossier de presse le Familia</p>
+            </a>
+        </div>
     </div>
-    <div class="col-sm-3 col-12 text-center">
-      <a href="" class="text-decoration-none bio-link">
-        <img src="../../../assets/images/instagram.jpg" class="icon">
-        <p>Sommelières d'exception</p>
-      </a>
-    </div>
-    <div class="col-sm-3 col-12 text-center">
-      <a href="" class="text-decoration-none bio-link">
-        <img src="../../../assets/images/instagram.jpg" class="icon">
-        <p>Dossier de presse le Familia</p>
-      </a>
-    </div>
-  </div>
 </div>
