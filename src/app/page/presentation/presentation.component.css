@@ -11,7 +11,7 @@
 }
 
 .bio-title{
-    color: #A60815;
+    color: black;
     margin-bottom: 10px;
     font-size: 30px;
 }
@@ -31,4 +31,7 @@
 }
 .description {
     min-height: 400px;
+}
+.pressbook-presentation{
+    min-width: 300px;
 }

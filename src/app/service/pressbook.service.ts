@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Globals } from '../globals';
+import {Globals} from '../globals';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContactuserService {
-  private uri = Globals.APP_API + 'contactuser';
+export class PressbookService {
+  private uri = Globals.APP_API + 'pressbook';
 
   constructor(private http: HttpClient) { }
-  getContactusers() {
+  getPressbooks() {
     return this.http.get(`${this.uri}`);
   }
-  getContactuser(id: number) {
+  getPressbookById(id: number) {
     return this.http.get(`${this.uri}/${id}`);
   }
 }

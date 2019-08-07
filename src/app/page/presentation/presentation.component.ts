@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Contactuser } from '../../class/contactuser';
 import { ContactuserService } from '../../service/contactuser.service';
+import {Pressbook} from '../../class/pressbook';
+import {PressbookService} from '../../service/pressbook.service';
 
 @Component({
   selector: 'app-presentation',
@@ -9,15 +11,23 @@ import { ContactuserService } from '../../service/contactuser.service';
 })
 export class PresentationComponent implements OnInit {
   contactusers: Contactuser[];
+  pressbooks: Pressbook[];
   private ready: boolean;
 
-  constructor(private contactServ: ContactuserService) { }
+  constructor(
+      private contactServ: ContactuserService,
+      private pressBookServ: PressbookService
+  ) { }
 
   ngOnInit() {
         this.contactServ.getContactusers()
             .subscribe((contactusers: Contactuser[]) => {
                 this.contactusers = contactusers;
                 this.ready = true;
+            });
+        this.pressBookServ.getPressbooks()
+            .subscribe((pressbooks: Pressbook[]) => {
+                this.pressbooks = pressbooks;
             });
   }
 
