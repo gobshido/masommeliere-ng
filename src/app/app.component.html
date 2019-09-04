@@ -30,7 +30,7 @@
                        routerLink="/page_prestation/{{ prestation.id }}"
                         routerLinkActive="active" (click)="sidenav.close()"
                        class="prestaMenu">
-                        <span *ngIf ="prestation.categorie.nom != 'Initiation'">{{ prestation.nom }}</span>
+                        <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
 
@@ -49,7 +49,7 @@
                        routerLink="/page_prestation/{{ prestation.id }}"
                        routerLinkActive="active" (click)="sidenav.close()"
                        class="prestaMenu">
-                        <span *ngIf ="prestation.categorie.nom != 'Initiation'">{{ prestation.nom }}</span>
+                        <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
                 <a routerLink="/actualite"

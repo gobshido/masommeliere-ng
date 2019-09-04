@@ -26,12 +26,13 @@
     color: black;
 }
 
-.description, .pressbook {
+.description{
     margin-top: 20px;
 }
 .description {
-    min-height: 400px;
+    min-height: 360px;
 }
 .pressbook-presentation{
     min-width: 300px;
 }
+
