@@ -1,6 +1,6 @@
 <div class="bg-grey">
     <span *ngIf="prestation">
-        <h1>{{prestation.nom}}</h1>
+        <h1>{{prestation.nom.toUpperCase()}}</h1>
         <div class="d-flex justify-content-center">
             <mat-spinner *ngIf="!ready"></mat-spinner>
         </div>
@@ -14,6 +14,13 @@
                     <span [innerHTML]="prix.devise + ' / personne'"></span>
                 </div>
             </div>
+
+
+            <div *ngIf="prestation.categorie.nom != 'Initiations'">
+                <span [innerHTML]="prestation.description"></span>
+            </div>
+
+
             <div *ngFor="let module of prestation.modules">
                 <div class="align-card">
                     <mat-card class="d-flex flex-column flex-wrap">

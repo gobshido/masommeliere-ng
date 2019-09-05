@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:400,700&display=swap');
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: white;
+}
+*{
+    font-family: "Trebuchet MS", "Encode Sans", Sans-Serif;
 }

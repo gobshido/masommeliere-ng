@@ -1,5 +1,5 @@
 <div class="bg-grey">
-    <h1 class="title">{{titleService.currentTitle}}</h1>
+    <h1>{{titleService.currentTitle.toUpperCase()}}</h1>
     <div class="d-flex justify-content-center">
         <mat-spinner *ngIf="!ready"></mat-spinner>
     </div>
@@ -11,10 +11,10 @@
         </div>
         <div class="col-6 actuText">
             <div [innerHTML]="actualite.titre" class="textDesc textTitle"></div>
-            <div [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'" class="textDesc"></div>
-            <div [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'" class="textDesc"></div>
-            <div [innerHTML]="actualite.lieu" class="textDesc"></div>
-            <div [innerHTML]="actualite.description" class="textDesc"></div>
+            <div class="textDesc"><span class="label">Date : </span><span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span></div>
+            <div class="textDesc"><span class="label">Heure : </span><span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span></div>
+            <div class="textDesc"><span class="label">Lieu : </span><span [innerHTML]="actualite.lieu"></span></div>
+            <div class="textDesc"><span class="label">Description : </span><span [innerHTML]="actualite.description"></span></div>
         </div>
         </span>
     </div>
