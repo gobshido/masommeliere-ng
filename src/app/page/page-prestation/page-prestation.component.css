@@ -11,9 +11,16 @@ h1{
     text-align: center;
     padding-top: 20px;
 }
+.titlecolor{
+    color: #A60815;
+}
+.descriptionPrestation{
+    margin-right: 10px;
+    margin-left: 10px;
+}
 .btn-back {
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     border: solid 1px #e5e5e5;
     background: #A60815;
 }
@@ -41,12 +48,12 @@ mat-card-content{
 .prestaName{
     color: #A60815;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: bold;
 }
 .prix{
     margin-bottom: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
 }
 .title{
     font-size: 30px;
@@ -63,16 +70,4 @@ mat-card-content{
 .duree{
     margin-bottom: 20px;
 }
-.notInitiation{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 61vh;
-    padding: 10px;
-}
-.devis{
-    font-size: 10px;
-    bottom: 115px;
-    position: fixed;
-}
+

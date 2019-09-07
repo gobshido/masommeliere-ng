@@ -15,6 +15,7 @@
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Présentation</span>
                 </a>
+
                 <a mat-list-item (click)="togglePart()">
                     <span>Particuliers</span>
                     <mat-icon *ngIf="!showPart">chevron_right</mat-icon>
@@ -52,9 +53,14 @@
                         <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
+
                 <a routerLink="/actualite"
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Actualités</span>
+                </a>
+                <a routerLink="/contact"
+                   routerLinkActive="active" mat-list-item (click)="sidenav.close()">
+                    <span>Contact</span>
                 </a>
             </mat-nav-list>
         </nav>

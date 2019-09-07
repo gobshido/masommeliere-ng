@@ -1,3 +1,9 @@
-<p>
-  contact works!
-</p>
+<div class="bg-grey">
+    <h1>{{titleService.currentTitle.toUpperCase()}}</h1>
+    <div class="d-flex justify-content-center">
+        <mat-spinner *ngIf="!ready"></mat-spinner>
+    </div>
+    <div *ngIf="ready">
+        <div>hello world</div>
+    </div>
+</div>

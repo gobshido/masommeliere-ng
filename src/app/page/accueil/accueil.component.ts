@@ -9,8 +9,12 @@ import {Globals} from '../../globals';
 })
 export class AccueilComponent implements OnInit {
   title: string = Globals.APP_NAME;
+  private ready: boolean;
+
   constructor(private titleservice: TitleService) {}
+
   ngOnInit(): void {
+    this.ready = true;
     this.titleservice.init();
   }
 

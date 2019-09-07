@@ -1,6 +1,6 @@
 .bg-grey{
     background-color: #e5e5e5;
-    top: 100px;
+    top: 80px;
     position: relative;
 }
 .row{
@@ -16,14 +16,7 @@ h1{
     padding-top: 20px;
 }
 .actu{
-    display: flex;
     width: 100%;
-    margin-bottom: 20px;
-}
-.actuText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .textDesc{
     margin: 10px;

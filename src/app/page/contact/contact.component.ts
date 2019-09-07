@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TitleService} from '../../service/title.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  private ready: boolean;
 
-  constructor() { }
+  constructor(
+      private titleService: TitleService,
+  ) { }
 
   ngOnInit() {
+    this.titleService.init();
+    this.ready = true;
   }
 
 }

@@ -10,7 +10,7 @@
                 <a routerLink="/page_prestation/{{ prestation.id }}"
                    routerLinkActive="active" class="text-center text-decoration-none">
                     <mat-card-title class="prestaName">
-                        {{prestation.nom}}
+                        {{ prestation.nom }}
                     </mat-card-title>
                     <mat-card-content>
                         <div *ngFor="let prix of prestation.prices |targetPriceFilter:0">

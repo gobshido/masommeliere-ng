@@ -1,6 +1,9 @@
 <div class="bg-grey">
     <span *ngIf="prestation">
-        <h1>{{prestation.nom.toUpperCase()}}</h1>
+        <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title">{{prestation.nom.toUpperCase()}}</h1>
+        <ng-template #title>
+            <h1 class="titlecolor">{{prestation.nom}}</h1>
+        </ng-template>
         <div class="d-flex justify-content-center">
             <mat-spinner *ngIf="!ready"></mat-spinner>
         </div>
@@ -11,16 +14,28 @@
                         {{targetprice.nom.toUpperCase()}}
                     </div>
                     <span [innerHTML]="prix.value"></span>
-                    <span [innerHTML]="prix.devise + ' / personne'"></span>
+                    <span *ngIf="prix.value">
+                        <span [innerHTML]="prix.devise"></span>
+                    </span>
+                    <span [ngSwitch]="prestation.categorie.nom">
+                        <span *ngSwitchCase="'Expertise et gestion de cave'">
+                            <span [innerHTML]="' de l\'heure'"></span>
+                        </span>
+                        <span *ngSwitchCase="'Wine Club'">
+                            <span [innerHTML]="' / trimestre'"></span>
+                        </span>
+                        <span *ngSwitchCase="'Wine Shopper'">
+                            <span [innerHTML]="'Prix sur devis *'"></span>
+                        </span>
+                        <span *ngSwitchDefault>
+                            <span [innerHTML]="' / personne'"></span>
+                        </span>
+                    </span>
                 </div>
             </div>
-
-
             <div *ngIf="prestation.categorie.nom != 'Initiations'">
-                <span [innerHTML]="prestation.description"></span>
+                <div [innerHTML]="prestation.description" class="descriptionPrestation"></div>
             </div>
-
-
             <div *ngFor="let module of prestation.modules">
                 <div class="align-card">
                     <mat-card class="d-flex flex-column flex-wrap">
