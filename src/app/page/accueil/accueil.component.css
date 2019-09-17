@@ -3,7 +3,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    top: 80px;
+    top: 100px;
 }
 .home-title{
     color: white;
@@ -26,8 +26,5 @@
 .shadow-back{
     background-color: rgba(0, 0, 0, 0.3);
     height: 45vh;
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
 }

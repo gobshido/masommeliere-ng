@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Globals } from './globals';
 import { Prestation } from './class/prestation';
 import { PrestationService } from './service/prestation.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
 
   constructor(private titleservice: TitleService,
               private prestationServ: PrestationService,
+              private cookieService: CookieService
   ) {}
 
   togglePart() {

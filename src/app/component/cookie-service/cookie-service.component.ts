@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CookieService} from 'ngx-cookie-service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-cookie-service',
@@ -15,14 +15,14 @@ export class CookieServiceComponent implements OnInit {
 
   ngOnInit() {
     this.display = true;
-    this.cookieValue = this.cookieService.get('test');
-    this.cookieExists = this.cookieService.check('test');
+    this.cookieValue = this.cookieService.get('rgpd');
+    this.cookieExists = this.cookieService.check('rgpd');
     if (this.cookieExists) {
       this.hide();
     }
   }
-  test() {
-    this.cookieService.set('test', 'hello world');
+  cookieOk() {
+    this.cookieService.set('rgpd', 'rgpd acceptance');
     this.display = false;
   }
   hide() {

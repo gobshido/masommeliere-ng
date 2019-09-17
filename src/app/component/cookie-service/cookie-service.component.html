@@ -1,16 +1,21 @@
 <mat-card *ngIf="!CookieValue && display">
     <p>
         Nous utilisons des cookies pour personnaliser notre contenu, améliorer le confort sur notre site
-        et pour analyser le trafic sur notre site. Ma Sommelière respecte votre droit à la vie privée
-        et vous pouvez obtenir plus d’informations en consultant la
-        <a routerLink="/politique_confidentialite" target="_blank" class="text-decoration-none text-dark">
-            Politique de confidentialité
-        </a>.
+        et pour analyser le trafic sur notre site.
+    </p>
+    <p>
+        Ma Sommelière respecte votre droit à la vie privée
+        et vous pouvez obtenir plus d’informations en consultant notre
+        <a routerLink="/politique_confidentialite" target="_blank" class="text-dark">
+            Politique de confidentialité</a>.
     </p>
     <p>
         En poursuivant votre navigation sur notre site, vous acceptez tous les cookies.
     </p>
     <mat-card-actions>
-        <button mat-button (click)="test()">Accepter</button>
+        <button (click)="cookieOk()">Accepter</button>
+    </mat-card-actions>
+    <mat-card-actions>
+        <button (click)="hide()">Refuser</button>
     </mat-card-actions>
 </mat-card>

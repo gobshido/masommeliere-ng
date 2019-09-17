@@ -1,16 +1,18 @@
-<div class="bg-grey">
-    <h1>{{titleService.currentTitle.toUpperCase()}}</h1>
-    <h2>PROFESSIONNELS</h2>
+<div class="container-fluid bg-grey">
+    <div class="row text-center align-content-center">
+        <h1 class="col-12 my-3">{{titleService.currentTitle.toUpperCase()}}</h1>
+    </div>
+    <h2 class="text-center">PROFESSIONNELS</h2>
     <div class="d-flex justify-content-center">
         <mat-spinner *ngIf="!ready"></mat-spinner>
     </div>
-    <div class="align-card" *ngIf="ready">
+    <div class="align-card d-flex justify-content-center flex-wrap" *ngIf="ready">
         <span *ngFor="let prestation of prestations | cibleFilter: 'Professionnels' | categoryFilter: 'Initiations'">
             <mat-card class="d-flex flex-column flex-wrap">
                 <a routerLink="/page_prestation/{{ prestation.id }}"
                    routerLinkActive="active" class="text-center text-decoration-none">
                     <mat-card-title class="prestaName">
-                        {{prestation.nom}}
+                        {{ prestation.nom }}
                     </mat-card-title>
                     <mat-card-content>
                         <div *ngFor="let prix of prestation.prices |targetPriceFilter:10">

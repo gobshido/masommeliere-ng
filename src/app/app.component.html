@@ -15,7 +15,6 @@
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Présentation</span>
                 </a>
-
                 <a mat-list-item (click)="togglePart()">
                     <span>Particuliers</span>
                     <mat-icon *ngIf="!showPart">chevron_right</mat-icon>
@@ -34,7 +33,6 @@
                         <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
-
                 <a mat-list-item (click)="togglePro()">
                     <span>Professionnels</span>
                     <mat-icon *ngIf="!showPro">chevron_right</mat-icon>
@@ -53,7 +51,6 @@
                         <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
                     </a>
                 </mat-nav-list>
-
                 <a routerLink="/actualite"
                    routerLinkActive="active" mat-list-item (click)="sidenav.close()">
                     <span>Actualités</span>
@@ -73,6 +70,7 @@
                 <mat-icon mat-list-icon class="size-icon">menu</mat-icon>
             </button>
         </mat-toolbar>
+        <app-cookie-service></app-cookie-service>
         <footer class="fixed-bottom">
             <table class="footer-size container-fluid">
                 <tr class="row text-center">

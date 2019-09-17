@@ -1,15 +1,5 @@
-@media screen and (max-width: 576px) {
-    .main-container{
-        height: 86vh !important;
-    }
-}
-@media screen and (min-width: 577px) and (max-width: 1440px) {
-    .main-container{
-        height: 87vh !important;
-    }
-}
 .main-container{
-    height: 88vh;
+    height: 91vh;
 }
 mat-sidenav {
     min-width: 100%;

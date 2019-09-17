@@ -1,12 +1,17 @@
-<div class="bg-grey">
+<div class="container-fluid bg-grey">
+    <div class="d-flex justify-content-center">
+        <mat-spinner *ngIf="!ready"></mat-spinner>
+    </div>
     <span *ngIf="prestation">
-        <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title">{{prestation.nom.toUpperCase()}}</h1>
-        <ng-template #title>
-            <h1 class="titlecolor">{{prestation.nom}}</h1>
-        </ng-template>
-        <div class="d-flex justify-content-center">
-            <mat-spinner *ngIf="!ready"></mat-spinner>
+        <div class="row text-center align-content-center">
+            <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title" class="col-12 my-3">
+                {{prestation.nom.toUpperCase()}}
+            </h1>
+            <ng-template #title>
+                <h1 class="titlecolor col-12 my-3">{{prestation.nom}}</h1>
+            </ng-template>
         </div>
+
         <div *ngIf="ready">
             <div *ngFor="let prix of prestation.prices">
                 <div *ngIf="prix.isDesactivated == false" class="text-center prix" >
@@ -37,10 +42,10 @@
                 <div [innerHTML]="prestation.description" class="descriptionPrestation justify-content-center"></div>
             </div>
             <div *ngFor="let module of prestation.modules">
-                <div class="align-card">
+                <div class="align-card d-flex justify-content-center flex-wrap">
                     <mat-card class="d-flex flex-column flex-wrap">
                         <mat-card-content>
-                            <mat-card-title class="prestaName">
+                            <mat-card-title>
                                 <div [innerHTML]="module.nom" class="modName"></div>
                             </mat-card-title>
                             <div class="duree">

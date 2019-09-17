@@ -1,35 +1,31 @@
 .bg-grey{
     background-color: #e5e5e5;
-    top: 80px;
+    top: 100px;
     position: relative;
 }
 h1{
     font-size: 30px;
     color: black;
     font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 20px;
 }
 .titlecolor{
     color: #A60815;
+}
+.prix{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.price{
+    font-size: 12px;
 }
 .descriptionPrestation{
     margin-right: 10px;
     margin-left: 10px;
     text-align: center;
 }
-.btn-back {
-    color: white;
-    font-weight: bold;
-    border: solid 1px #e5e5e5;
-    background: #A60815;
-}
 .align-card{
     text-align: -webkit-center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 @media screen and (max-width: 320px) {
     .mat-card{
@@ -46,30 +42,18 @@ h1{
 mat-card-content{
     color:black;
 }
-.prestaName{
-    color: #A60815;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-.prix{
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.title{
-    font-size: 30px;
-    color: #A60815;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
 .modName{
+    color: #A60815;
+    font-weight: bold;
     font-size: 18px;
     margin-bottom: 20px;
 }
 .duree{
     margin-bottom: 20px;
 }
-.price{
-    font-size: 12px;
+.btn-back {
+    color: white;
+    font-weight: bold;
+    border: solid 1px #e5e5e5;
+    background: #A60815;
 }
