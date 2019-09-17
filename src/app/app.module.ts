@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import {
-    MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule,
-    MatButtonModule, MatExpansionModule, MatListModule, MatTableModule, MatCardModule
+    MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule, MatButtonModule,
+    MatExpansionModule, MatListModule, MatTableModule, MatCardModule, MatProgressSpinnerModule
 } from '@angular/material';
+import { CookieService } from 'ngx-cookie-service';
 
 import { PresentationComponent } from './page/presentation/presentation.component';
 import { ParticulierComponent } from './page/particulier/particulier.component';
@@ -21,13 +22,13 @@ import { ImageComponent } from './component/image/image.component';
 import { PagePrestationComponent } from './page/page-prestation/page-prestation.component';
 import { MentionsLegalesComponent } from './page/mentions-legales/mentions-legales.component';
 import { PolitiqueConfidentialiteComponent } from './page/politique-confidentialite/politique-confidentialite.component';
+import { CookieServiceComponent } from './component/cookie-service/cookie-service.component';
 
 import { HtmlPipe } from './pipe/html.pipe';
 import { TargetPriceFilterPipe } from './pipe/target-price-filter.pipe';
 import { CibleFilterPipe } from './pipe/cible-filter.pipe';
 import { CategoryFilterPipe } from './pipe/category-filter.pipe';
 import { ImagepathPipe } from './pipe/imagepath.pipe';
-import { MatProgressSpinnerModule } from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'accueil',
@@ -83,6 +84,7 @@ const appRoutes: Routes = [
     CategoryFilterPipe,
     MentionsLegalesComponent,
     PolitiqueConfidentialiteComponent,
+    CookieServiceComponent,
   ],
     imports: [
         BrowserModule,
@@ -99,10 +101,12 @@ const appRoutes: Routes = [
         HttpClientModule,
         MatTableModule,
         MatCardModule,
+        MatProgressSpinnerModule,
         RouterModule.forRoot(appRoutes),
-        MatProgressSpinnerModule
     ],
-  providers: [],
+  providers: [
+      CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

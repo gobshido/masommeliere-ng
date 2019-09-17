@@ -67,27 +67,29 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar role="heading" class="bg-color fixed-top">
-            <img src="../assets/images/logo-ma-sommeliere.png" class="logo">
+            <img src="../assets/images/logo-ma-sommeliere.png" alt="Logo Ma Sommelière vin Bordeaux" class="logo">
             <span class="remaining-space"></span>
             <button mat-button class="icon-menu" (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon class="size-icon">menu</mat-icon>
             </button>
         </mat-toolbar>
-        <footer class="container-fluid fixed-bottom">
-            <table class="footer-size">
-                <td class="col">
-                    <tr><a routerLink="/mentions_legales" routerLinkActive="active"
-                           target="_blank" class="text-decoration-none text-dark">Mentions légales</a></tr>
-                    <tr><a routerLink="/politique_confidentialite" routerLinkActive="active"
-                           target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a></tr>
-                </td>
-                <td class="logo-footer col">
-                    <tr rowspan="2">
+        <footer class="fixed-bottom">
+            <table class="footer-size container-fluid">
+                <tr class="row text-center">
+                    <td class="col mt-auto mb-auto">
+                        <a routerLink="/mentions_legales" routerLinkActive="active"
+                           target="_blank" class="text-decoration-none text-dark">Mentions légales</a>
+                    </td>
+                    <td class="col">
                         <a href="https://www.instagram.com/lucie_dussillols/" target="_blank">
-                            <img src="../assets/images/instagram.jpg" class="icon-footer">
+                            <img src="../assets/images/instagram.jpg" alt="Instagram Ma Sommelière vin Bordeaux" class="icon-footer">
                         </a>
-                    </tr>
-                </td>
+                    </td>
+                    <td class="col mt-auto mb-auto">
+                        <a routerLink="/politique_confidentialite" routerLinkActive="active"
+                           target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a>
+                    </td>
+                </tr>
             </table>
         </footer>
         <router-outlet></router-outlet>

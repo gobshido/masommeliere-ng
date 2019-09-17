@@ -43,10 +43,13 @@ mat-card-content{
 .prestaName{
     color: #A60815;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: bold;
 }
 .prix{
     margin-bottom: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
+}
+.detail{
+    text-decoration: underline;
 }

@@ -13,28 +13,28 @@
                     <div *ngFor="let targetprice of prix.targetprices">
                         {{targetprice.nom.toUpperCase()}}
                     </div>
-                    <span [innerHTML]="prix.value"></span>
+                    <span [innerHTML]="prix.value" class="price"></span>
                     <span *ngIf="prix.value">
-                        <span [innerHTML]="prix.devise"></span>
+                        <span [innerHTML]="prix.devise" class="price"></span>
                     </span>
                     <span [ngSwitch]="prestation.categorie.nom">
                         <span *ngSwitchCase="'Expertise et gestion de cave'">
-                            <span [innerHTML]="' de l\'heure'"></span>
+                            <span [innerHTML]="' de l\'heure'" class="price"></span>
                         </span>
                         <span *ngSwitchCase="'Wine Club'">
-                            <span [innerHTML]="' / trimestre'"></span>
+                            <span [innerHTML]="' / trimestre'" class="price"></span>
                         </span>
                         <span *ngSwitchCase="'Wine Shopper'">
-                            <span [innerHTML]="'Prix sur devis *'"></span>
+                            <span [innerHTML]="'Prix sur devis *'" class="price"></span>
                         </span>
                         <span *ngSwitchDefault>
-                            <span [innerHTML]="' / personne'"></span>
+                            <span [innerHTML]="' / personne'" class="price"></span>
                         </span>
                     </span>
                 </div>
             </div>
             <div *ngIf="prestation.categorie.nom != 'Initiations'">
-                <div [innerHTML]="prestation.description" class="descriptionPrestation"></div>
+                <div [innerHTML]="prestation.description" class="descriptionPrestation justify-content-center"></div>
             </div>
             <div *ngFor="let module of prestation.modules">
                 <div class="align-card">

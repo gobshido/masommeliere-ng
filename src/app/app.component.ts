@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TitleService } from './service/title.service';
 import { Router } from '@angular/router';
 import { Globals } from './globals';
-import {Prestation} from './class/prestation';
-import {PrestationService} from './service/prestation.service';
+import { Prestation } from './class/prestation';
+import { PrestationService } from './service/prestation.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   showPro = false;
 
   constructor(private titleservice: TitleService,
-              private prestationServ: PrestationService
+              private prestationServ: PrestationService,
   ) {}
 
   togglePart() {

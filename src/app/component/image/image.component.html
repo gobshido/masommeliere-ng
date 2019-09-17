@@ -1,3 +1,7 @@
-<p>
-  image works!
-</p>
+<div>
+  <mat-spinner *ngIf="!imgLoading"></mat-spinner>
+  <img [src]="src"
+       [alt]="alt"
+       [title]="title"
+       [className]="imgLoading ? 'picture' : 'hide-picture'" (load)="onImageLoad()"/>
+</div>

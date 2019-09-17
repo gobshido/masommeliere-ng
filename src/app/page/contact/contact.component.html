@@ -4,6 +4,34 @@
         <mat-spinner *ngIf="!ready"></mat-spinner>
     </div>
     <div *ngIf="ready">
-        <div>hello world</div>
+        <div class="d-flex justify-content-center mb-4" *ngFor="let contactuser of contactusers">
+            <div class="container-fluid">
+                <div class="row">
+                        <img *ngIf="contactuser.image" class="col-6"
+                             src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
+                    <div class="col-6 d-flex flex-column justify-content-center">
+                        <div class="mb-4">
+                            <div class="contact center">Téléphone :</div>
+                            <div [innerHTML]="contactuser.telephone" class="center"></div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="contact center">Jours d'ouverture :</div>
+                            <div [innerHTML]="contactuser.jourOuverture" class="center"></div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="contact center">Heure d'ouverture :</div>
+                            <div [innerHTML]="contactuser.heureOuverture.timestamp *1000 | date: 'HH:mm'" class="center"></div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="contact center">Heure de fermeture :</div>
+                            <div [innerHTML]="contactuser.heureFermeture.timestamp *1000 | date: 'HH:mm'" class="center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pb-4">
+            <a href="mailto:masommeliere@gmail.com" role="button" class="btn btn-back">Contactez-moi</a>
+        </div>
     </div>
 </div>

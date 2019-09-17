@@ -8,11 +8,18 @@ import { Globals } from '../../globals';
 })
 export class ImageComponent implements OnInit {
   @Input() imgPath: string;
+  @Input() alt: string;
+  @Input() title: string;
   src: string;
+  imgLoading: boolean;
+
   constructor() { }
 
   ngOnInit() {
     this.src = Globals.IMG_PATH_PREFIX + this.imgPath;
+  }
+  onImageLoad() {
+    this.imgLoading = true;
   }
 
 }

@@ -18,8 +18,10 @@ h1{
 .actu{
     width: 100%;
 }
-.textDesc{
-    margin: 10px;
+@media screen and (max-width: 320px) {
+    .info{
+        padding-left: 30px;
+    }
 }
 .textTitle{
     font-weight: bold;
@@ -28,9 +30,6 @@ h1{
 }
 .label{
     font-weight: bold;
-}
-.picture{
-    max-height: 300px;
 }
 
 

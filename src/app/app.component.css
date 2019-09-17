@@ -65,10 +65,7 @@ nav mat-nav-list a {
     width: 40px;
 }
 .footer-size{
-    font-size: 16px;
-}
-.logo-footer{
-    vertical-align: middle;
+    width: 100vw;
 }
 .icon-footer{
     height: 50px;

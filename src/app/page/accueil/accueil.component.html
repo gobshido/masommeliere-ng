@@ -3,23 +3,24 @@
 </div>
 <div *ngIf="ready">
   <div class="container-fluid background">
-    <div class="row align-content-center text-center" style="height: calc(100vh - 194px);">
+    <div class="row align-content-center text-center" style="height: calc(100vh - 175px);">
       <div class="shadow-back">
-        <h1 class="home-title">{{ title }}</h1>
-          <div class="row description">
-            <span class="col-4 col-sm"></span>
-            <p class="col-sm-4 col-12 home-text">
-              vous propose un service sur-mesure dans l'univers du vin :
-            </p>
-            <span class="col-4 col-sm"></span>
-          </div>
-          <div class="row description">
-            <span class="col-4 col-sm"></span>
-            <p class="col-sm-4 col-12 home-text">
-              Initiation, expertise de cave, service, conseil...
-            </p>
-            <span class="col-4 col-sm"></span>
-          </div>
+        <h1 class="home-title"><strong>{{ title }}</strong></h1>
+        <div class="row description">
+          <span class="col-4 col-sm"></span>
+          <p class="col-sm-4 col-12 home-text">
+            Vous propose un service sur-mesure dans l'univers du <strong>vin</strong> :
+          </p>
+          <span class="col-4 col-sm"></span>
+        </div>
+        <div class="row description">
+          <span class="col-4 col-sm"></span>
+          <p class="col-sm-4 col-12 home-text">
+            Initiation, expertise de cave, service, <strong>conseil</strong>...
+          </p>
+          <span class="col-4 col-sm"></span>
+        </div>
+        <app-cookie-service></app-cookie-service>
       </div>
     </div>
   </div>
