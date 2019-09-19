@@ -1,3 +1,18 @@
 mat-card{
     z-index: 100;
+    background-color: #e5e5e5;;
+}
+.bandeau{
+    top: 50%;
+    font-size: 12px;
+}
+p{
+    margin-bottom: 10px;
+}
+.link{
+    text-decoration: underline;
+}
+.cookieButton{
+    width: 90px;
+    font-family: "Trebuchet MS", "Encode Sans", Sans-Serif !important;
 }

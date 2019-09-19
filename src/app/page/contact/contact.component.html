@@ -1,5 +1,7 @@
 <div class="bg-grey">
-    <h1>{{titleService.currentTitle.toUpperCase()}}</h1>
+    <div class="row text-center align-content-center">
+        <h1 class="col-12 my-3 main-title">{{titleService.currentTitle.toUpperCase()}}</h1>
+    </div>
     <div class="d-flex justify-content-center">
         <mat-spinner *ngIf="!ready"></mat-spinner>
     </div>

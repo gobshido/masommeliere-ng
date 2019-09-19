@@ -2,13 +2,13 @@
     <div class="d-flex justify-content-center">
         <mat-spinner *ngIf="!ready"></mat-spinner>
     </div>
-    <span *ngIf="prestation">
+    <div *ngIf="prestation">
         <div class="row text-center align-content-center">
-            <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title" class="col-12 my-3">
+            <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title" class="col-12 my-3 main-title">
                 {{prestation.nom.toUpperCase()}}
             </h1>
             <ng-template #title>
-                <h1 class="titlecolor col-12 my-3">{{prestation.nom}}</h1>
+                <h1 class="titlecolor col-12 my-3 main-title">{{prestation.nom}}</h1>
             </ng-template>
         </div>
 
@@ -59,8 +59,9 @@
                 </div>
             </div>
         </div>
-    </span>
-    <div class="d-flex justify-content-end">
-        <button role="button" class="btn btn-back" (click)="back()">Retour</button>
+        <div class="d-flex justify-content-end back-button">
+            <button role="button" class="btn btn-back" (click)="back()">Retour</button>
+        </div>
     </div>
+
 </div>

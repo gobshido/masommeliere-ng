@@ -1,5 +1,5 @@
 <mat-sidenav-container class="main-container">
-    <mat-sidenav class="sidenav" mode="over" [(opened)]="opened" #sidenav>
+    <mat-sidenav mode="over" [(opened)]="opened" #sidenav>
     <span class="d-flex justify-content-end close-menu">
       <button mat-button (click)="sidenav.toggle()">
         <mat-icon class="size-icon">clear</mat-icon>
@@ -73,19 +73,27 @@
         <app-cookie-service></app-cookie-service>
         <footer class="fixed-bottom">
             <table class="footer-size container-fluid">
-                <tr class="row text-center">
-                    <td class="col mt-auto mb-auto">
+                <tr class="row text-center mx-0">
+                    <td class="col mt-auto mb-auto px-0">
                         <a routerLink="/mentions_legales" routerLinkActive="active"
                            target="_blank" class="text-decoration-none text-dark">Mentions légales</a>
                     </td>
-                    <td class="col">
+                    <td class="col px-0">
                         <a href="https://www.instagram.com/lucie_dussillols/" target="_blank">
-                            <img src="../assets/images/instagram.jpg" alt="Instagram Ma Sommelière vin Bordeaux" class="icon-footer">
+                            <img src="../assets/images/instagram.jpg" alt="Instagram Ma Sommelière vin Bordeaux"
+                                  class="icon-footer">
                         </a>
                     </td>
-                    <td class="col mt-auto mb-auto">
+                    <td class="col px-0">
+                        <a href="https://www.facebook.com/masommeliere/" target="_blank">
+                            <img src="../assets/images/f_logo_RGB-Blue_58.png" alt="Facebook Ma Sommelière vin Bordeaux"
+                                 class="icon-footer">
+                        </a>
+                    </td>
+                    <td class="col mt-auto mb-auto px-0">
                         <a routerLink="/politique_confidentialite" routerLinkActive="active"
-                           target="_blank" class="text-decoration-none text-dark">Politique de confidentialité</a>
+                           target="_blank" class="text-decoration-none text-dark">Politique de confidentialité
+                        </a>
                     </td>
                 </tr>
             </table>

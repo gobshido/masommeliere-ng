@@ -8,3 +8,8 @@
 *{
     font-family: "Trebuchet MS", "Encode Sans", Sans-Serif;
 }
+.main-title{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}

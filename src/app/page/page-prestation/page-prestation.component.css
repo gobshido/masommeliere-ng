@@ -1,15 +1,9 @@
 .bg-grey{
-    background-color: #e5e5e5;
     top: 100px;
     position: relative;
 }
-h1{
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
-}
 .titlecolor{
-    color: #A60815;
+    color: #A60815 !important;
 }
 .prix{
     margin-bottom: 20px;
@@ -50,6 +44,10 @@ mat-card-content{
 }
 .duree{
     margin-bottom: 20px;
+}
+.back-button{
+    right: 1vw;
+    bottom: 1vh;
 }
 .btn-back {
     color: white;
