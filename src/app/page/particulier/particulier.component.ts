@@ -14,17 +14,17 @@ export class ParticulierComponent implements OnInit {
     private ready: boolean;
 
   constructor(
-      private router: Router,
-      private prestationServ: PrestationService,
-      private titleService: TitleService,
+    private router: Router,
+    private prestationServ: PrestationService,
+    private titleService: TitleService,
   ) { }
 
   ngOnInit() {
-        this.prestationServ.getPrestations()
-            .subscribe((prestations: Prestation[]) => {
-              this.prestations = prestations;
-              this.ready = true;
-            });
-        this.titleService.init();
+    this.prestationServ.getPrestations()
+        .subscribe((prestations: Prestation[]) => {
+          this.prestations = prestations;
+          this.ready = true;
+        });
+    this.titleService.init();
   }
 }

@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-content>
+        <form [formControl]="mail">
+            <mat-form-field>
+                <input matInput type="text"
+                       placeholder="Nom"
+                       formControlName="lastname">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text"
+                       placeholder="Prénom"
+                       formControlName="firstname">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="mail"
+                       placeholder="Adresse mail"
+                       formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="textarea"
+                       placeholder="Message"
+                       formControlName="message">
+            </mat-form-field>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Catégorie
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div *ngFor="let categorie of categorie">
+                    <button [innerHTML]="categorie.nom" role="menuitem"></button>
+                </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Cible
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div *ngFor="let cible of cible">
+                    <button [innerHTML]="cible.nom" role="button"></button>
+                </div>
+            </mat-expansion-panel>
+            <button (click)="onSubmit()" role="button">Envoyer</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+

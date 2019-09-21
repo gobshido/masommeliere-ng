@@ -9,9 +9,13 @@
         <div class="d-flex justify-content-center mb-4" *ngFor="let contactuser of contactusers">
             <div class="container-fluid">
                 <div class="row">
-                        <img *ngIf="contactuser.image" class="col-6"
-                             src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
-                    <div class="col-6 d-flex flex-column justify-content-center">
+                    <img *ngIf="contactuser.image" class="col-lg-6 col-12 mb-2 biopicture"
+                         src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
+
+<!--                    <app-contact-mail class="col-6"></app-contact-mail>-->
+
+
+                    <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
                         <div class="mb-4">
                             <div class="contact center">Téléphone :</div>
                             <div [innerHTML]="contactuser.telephone" class="center"></div>

@@ -14,11 +14,12 @@ export class PagePrestationComponent implements OnInit {
     prestation: Prestation;
     private ready: boolean;
 
-    constructor(private route: ActivatedRoute,
-                private router: Router,
-                private prestationServ: PrestationService,
-                private titleService: TitleService,
-                private location: Location
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+        private prestationServ: PrestationService,
+        private titleService: TitleService,
+        private location: Location
     ) {  }
 
     ngOnInit() {
