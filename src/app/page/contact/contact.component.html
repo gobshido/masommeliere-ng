@@ -9,35 +9,28 @@
         <div class="d-flex justify-content-center mb-4" *ngFor="let contactuser of contactusers">
             <div class="container-fluid">
                 <div class="row">
-                    <img *ngIf="contactuser.image" class="col-lg-6 col-12 mb-2 biopicture"
-                         src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
-
-<!--                    <app-contact-mail class="col-6"></app-contact-mail>-->
-
-
-                    <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+                    <div class="col-12 col-lg-3 d-flex flex-column justify-content-center text-center">
                         <div class="mb-4">
-                            <div class="contact center">Téléphone :</div>
-                            <div [innerHTML]="contactuser.telephone" class="center"></div>
+                            <div class="contact">Téléphone :</div>
+                            <div [innerHTML]="contactuser.telephone"></div>
                         </div>
                         <div class="mb-4">
-                            <div class="contact center">Jours d'ouverture :</div>
-                            <div [innerHTML]="contactuser.jourOuverture" class="center"></div>
+                            <div class="contact">Jours d'ouverture :</div>
+                            <div [innerHTML]="contactuser.jourOuverture"></div>
                         </div>
                         <div class="mb-4">
-                            <div class="contact center">Heure d'ouverture :</div>
-                            <div [innerHTML]="contactuser.heureOuverture.timestamp *1000 | date: 'HH:mm'" class="center"></div>
-                        </div>
-                        <div class="mb-4">
-                            <div class="contact center">Heure de fermeture :</div>
-                            <div [innerHTML]="contactuser.heureFermeture.timestamp *1000 | date: 'HH:mm'" class="center"></div>
+                            <div class="contact">Heures d'ouverture :</div>
+                            <div>
+                                <span [innerHTML]="contactuser.heureOuverture.timestamp *1000 | date: 'HH:mm'"></span>
+                                 /
+                                <span [innerHTML]="contactuser.heureFermeture.timestamp *1000 | date: 'HH:mm'"></span>
+                            </div>
                         </div>
                     </div>
+                    <app-contact-mail class="col-12 col-lg-6"></app-contact-mail>
+                    <div class="col-0 col-lg-3"></div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex justify-content-center pb-4">
-            <a href="mailto:masommeliere@gmail.com" role="button" class="btn btn-back">Contactez-moi</a>
         </div>
     </div>
 </div>

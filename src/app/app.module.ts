@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
     MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule, MatButtonModule,
     MatExpansionModule, MatListModule, MatTableModule, MatCardModule, MatProgressSpinnerModule,
-    MatFormFieldModule, MatInputModule
+    MatFormFieldModule, MatInputModule, MatSelectModule
 } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -111,6 +111,7 @@ const appRoutes: Routes = [
         MatFormFieldModule,
         MatInputModule,
         RouterModule.forRoot(appRoutes),
+        MatSelectModule,
     ],
   providers: [
       CookieService

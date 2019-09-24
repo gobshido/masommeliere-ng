@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup} from '@angular/forms';
+import {FormControl, FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl} from '@angular/forms';
 import { Categorie } from '../../class/categorie';
 import { CategorieService } from '../../service/categorie.service';
 import { Cible } from '../../class/cible';
@@ -16,21 +16,15 @@ export class ContactMailComponent implements OnInit {
     categorie: Categorie[];
     cible: Cible[];
     mail: FormGroup;
+    emailSubmit: boolean;
+    emailFailed: boolean;
 
     constructor(
       private formBuilder: FormBuilder,
       private categorieService: CategorieService,
-      private cibleService: CibleService
-    ) {
-        this.mail = this.formBuilder.group({
-            firstname: '',
-            lastname: '',
-            email: '',
-            message: '',
-            category: '',
-            cible: ''
-        });
-    }
+      private cibleService: CibleService,
+      private http: HttpClient
+    ) {}
 
     ngOnInit() {
     this.categorieService.getCategories()
@@ -41,7 +35,9 @@ export class ContactMailComponent implements OnInit {
         .subscribe((cibles: Cible[]) => {
           this.cible = cibles;
         });
+    this.userEmailForm();
     }
+
     onSubmit() {
         const val = this.mail.value;
         const obj = {
@@ -49,9 +45,33 @@ export class ContactMailComponent implements OnInit {
             lastname: val.lastname,
             email: val.email,
             message: val.message,
-            category: val.category,
-            cible: val.cible
+            category: val.category.id,
+            cible: val.cible.id
         };
-        // return this.http.post(Globals.APP_API + 'contact/new', obj);
+        return this.http.post(Globals.APP_API + 'contact/new', obj).subscribe(
+            () => {
+                this.emailSubmit = true;
+            },
+            () => {
+                this.emailFailed = true;
+            }
+        );
+    }
+    userEmailForm() {
+        this.mail = this.formBuilder.group({
+            firstname: [null, Validators.required],
+            lastname: [null, Validators.required],
+            email: [null, Validators.compose([
+                Validators.email,
+                Validators.required])],
+            message: [null, Validators.required],
+            category: [null, Validators.required],
+            cible: [null, Validators.required]
+        });
+    }
+    refresh() {
+        this.emailSubmit = false;
+        this.emailFailed = false;
+        this.ngOnInit();
     }
 }
