@@ -1,69 +1,70 @@
-<mat-card>
-    <mat-card-content class="container-fluid">
-        <form [formGroup]="mail" (ngSubmit)="onSubmit()" class="row">
-            <mat-form-field class="col-12">
-                    <input matInput type="text"
-                           placeholder="Nom"
-                           formControlName="lastname"
-                           required>
-            </mat-form-field>
-            <mat-form-field class="col-12">
-                    <input matInput type="text"
-                           placeholder="Prénom"
-                           formControlName="firstname"
-                           required>
-            </mat-form-field>
-            <mat-form-field class="col-12">
-                    <input matInput type="mail"
-                           placeholder="Adresse mail"
-                           formControlName="email"
-                           required>
-            </mat-form-field>
-            <mat-form-field class="col-12">
-                <mat-select placeholder="Vous êtes"
-                            formControlName="cible"
-                            required>
-                    <mat-option *ngFor="let cible of cible" [value]="cible">{{ cible.nom }}</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field class="col-12">
-                <mat-select placeholder="Type de prestation"
-                            formControlName="category"
-                            required>
-                    <mat-option *ngFor="let categorie of categorie" [value]="categorie">{{ categorie.nom }}</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field class="col-12">
-                    <textarea matInput
-                              cdkTextareaAutosize
-                              #autosize="cdkTextareaAutosize"
-                              cdkAutosizeMaxRows="50"
-                              cdkAutosizeMinRows="10"
-                              placeholder="Message"
-                              formControlName="message"
-                              required>
-                    </textarea>
-            </mat-form-field>
+<div class="container-fluid d-flex justify-content-center">
+    <mat-card class="position-absolute mb-3">
+        <mat-card-content >
+            <form [formGroup]="mail" (ngSubmit)="onSubmit()" class="row">
+                <mat-form-field class="col-12">
+                        <input matInput type="text"
+                               placeholder="Nom"
+                               formControlName="lastname"
+                               required>
+                </mat-form-field>
+                <mat-form-field class="col-12">
+                        <input matInput type="text"
+                               placeholder="Prénom"
+                               formControlName="firstname"
+                               required>
+                </mat-form-field>
+                <mat-form-field class="col-12">
+                        <input matInput type="mail"
+                               placeholder="Adresse mail"
+                               formControlName="email"
+                               required>
+                </mat-form-field>
+                <mat-form-field class="col-12">
+                    <mat-select placeholder="Vous êtes"
+                                formControlName="cible"
+                                required>
+                        <mat-option *ngFor="let cible of cible" [value]="cible">{{ cible.nom }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="col-12">
+                    <mat-select placeholder="Type de prestation"
+                                formControlName="category"
+                                required>
+                        <mat-option *ngFor="let categorie of categorie" [value]="categorie">{{ categorie.nom }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="col-12">
+                        <textarea matInput
+                                  cdkTextareaAutosize
+                                  #autosize="cdkTextareaAutosize"
+                                  cdkAutosizeMaxRows="50"
+                                  cdkAutosizeMinRows="10"
+                                  placeholder="Message"
+                                  formControlName="message"
+                                  required>
+                        </textarea>
+                </mat-form-field>
 
-            <button type="submit" [disabled]="mail.invalid" class="d-flex mx-auto btn btn-back">Envoyer</button>
-        </form>
-    </mat-card-content>
-</mat-card>
-<mat-card *ngIf="emailSubmit" class="mt-2">
-    <mat-card-content class="text-center">
-        Votre message a bien été envoyé.
-    </mat-card-content>
-    <mat-card-actions>
-        <button (click)="refresh()" class="d-flex mx-auto btn btn-back">Fermer</button>
-    </mat-card-actions>
-</mat-card>
-<mat-card *ngIf="emailFailed" class="mt-2">
-    <mat-card-content class="text-center">
-        Une erreur s'est produite, veuillez recommencer ou contacter l'administrateur à l'adresse suivante :
-        <a href="mailto:masommeliere@gmail.com">masommeliere@gmail.com</a>
-    </mat-card-content>
-    <mat-card-actions>
-        <button (click)="refresh()" class="d-flex mx-auto btn btn-back">Fermer</button>
-    </mat-card-actions>
-</mat-card>
-
+                <button type="submit" [disabled]="mail.invalid" class="d-flex mx-auto btn btn-back">Envoyer</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+    <mat-card *ngIf="emailSubmit" class="mt-2 submission col-10 mx-auto">
+        <mat-card-content class="text-center">
+            Votre message a bien été envoyé.
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="refresh()" class="d-flex mx-auto btn btn-back">Fermer</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card *ngIf="emailFailed" class="mt-2 submission col-10 mx-auto">
+        <mat-card-content class="text-center">
+            Une erreur s'est produite, veuillez recommencer ou contacter l'administrateur à l'adresse suivante :
+            <a href="mailto:masommeliere@gmail.com">masommeliere@gmail.com</a>
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="refresh()" class="d-flex mx-auto btn btn-back">Fermer</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
