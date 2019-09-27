@@ -11,12 +11,12 @@ import {Router} from '@angular/router';
 })
 export class ParticulierComponent implements OnInit {
     prestations: Prestation[];
-    private ready: boolean;
+    public ready: boolean;
 
   constructor(
     private router: Router,
     private prestationServ: PrestationService,
-    private titleService: TitleService,
+    public titleService: TitleService,
   ) { }
 
   ngOnInit() {

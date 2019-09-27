@@ -16,11 +16,11 @@ export class ProfessionnelComponent implements OnInit {
   prestations: Prestation[];
   prices: Prix[];
   targetPrices: Targetprice[];
-  private ready: boolean;
+  public ready: boolean;
 
   constructor(
       private prestationServ: PrestationService,
-      private titleService: TitleService,
+      public titleService: TitleService,
       private priceService: PrixService,
       private targetPriceService: TargetpriceService,
   ) { }

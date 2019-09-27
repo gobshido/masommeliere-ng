@@ -12,7 +12,7 @@ import {PressbookService} from '../../service/pressbook.service';
 export class PresentationComponent implements OnInit {
   contactusers: Contactuser[];
   pressbooks: Pressbook[];
-  private ready: boolean;
+  public ready: boolean;
 
   constructor(
       private contactServ: ContactuserService,

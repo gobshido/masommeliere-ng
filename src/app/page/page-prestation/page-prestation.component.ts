@@ -12,7 +12,7 @@ import {Location} from '@angular/common';
 })
 export class PagePrestationComponent implements OnInit {
     prestation: Prestation;
-    private ready: boolean;
+    public ready: boolean;
 
     constructor(
         private route: ActivatedRoute,

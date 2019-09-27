@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class AccueilComponent implements OnInit {
   title: string = Globals.APP_NAME;
-  private ready: boolean;
+  public ready: boolean;
 
   constructor(private titleservice: TitleService,
               private cookieService: CookieService

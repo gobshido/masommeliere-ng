@@ -9,11 +9,11 @@ import {ContactuserService} from '../../service/contactuser.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  private ready: boolean;
+  public ready: boolean;
   contactusers: Contactuser[];
 
   constructor(
-      private titleService: TitleService,
+      public titleService: TitleService,
       private contactServ: ContactuserService
   ) { }
 

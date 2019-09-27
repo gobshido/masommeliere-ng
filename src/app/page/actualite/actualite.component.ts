@@ -10,10 +10,10 @@ import {Actualite} from '../../class/actualite';
 })
 export class ActualiteComponent implements OnInit {
   actualites: Actualite[];
-  private ready: boolean;
+  public ready: boolean;
 
   constructor(
-      private titleService: TitleService,
+      public titleService: TitleService,
       private actualiteService: ActualiteService
   ) { }
 
