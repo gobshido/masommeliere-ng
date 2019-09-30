@@ -1,21 +1,27 @@
+.container-fluid{
+    padding: 0;
+}
 .background{
     background-image: url("../../../assets/images/cave-degustation-noir.jpg");
     background-position: center;
     background-size: cover;
-    position: relative;
-    top: 100px;
+    min-height: 100vh;
 }
 .home-title{
     color: white;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     text-shadow: -2px 2px #A60815;
     font-size: 3rem;
-    padding-left: 10px;
-    padding-right: 10px;
 }
-.description{
-    width: 100%;
-    margin: 0;
+@media screen and (min-width: 576px){
+    .home-title{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 992px){
+    .home-title{
+        margin-bottom: 60px;
+    }
 }
 .home-text{
     font-size: 18px;
@@ -27,4 +33,6 @@
     background-color: rgba(0, 0, 0, 0.3);
     height: 45vh;
     width: 100%;
+    position: relative;
+    top: 0;
 }

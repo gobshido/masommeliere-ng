@@ -2,23 +2,19 @@
   <mat-spinner *ngIf="!ready"></mat-spinner>
 </div>
 <div *ngIf="ready">
-  <div class="container-fluid background">
-    <div class="row align-content-center text-center" style="height: calc(100vh - 168px);">
-      <div class="shadow-back d-flex flex-column justify-content-center">
-        <h1 class="home-title"><strong>{{ title }}</strong></h1>
-        <div class="row description">
-          <span class="col-4 col-sm"></span>
-          <p class="col-sm-4 col-12 home-text">
+  <div class="background d-flex">
+    <div class="row align-content-center text-center mx-0 w-100">
+      <div class="shadow-back d-flex flex-column justify-content-center home-text">
+        <h1 class="home-title px-2"><strong>{{ title }}</strong></h1>
+        <div class="d-flex justify-content-center w-100 m-0">
+          <p class="col-sm-4 col-12">
             Vous propose un service sur-mesure dans l'univers du <strong>vin</strong> :
           </p>
-          <span class="col-4 col-sm"></span>
         </div>
-        <div class="row description">
-          <span class="col-4 col-sm"></span>
-          <p class="col-sm-4 col-12 home-text">
+        <div class="d-flex justify-content-center w-100 m-0">
+          <p class="col-sm-4 col-12">
             Initiation, expertise de cave, service, <strong>conseil</strong>...
           </p>
-          <span class="col-4 col-sm"></span>
         </div>
       </div>
     </div>

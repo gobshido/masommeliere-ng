@@ -1,18 +1,43 @@
-.bg-grey{
-    top: 100px;
-    position: relative;
-}
 h1{
     font-size: 30px;
     color: black;
     font-weight: bold;
 }
-.bio-picture{
-    height: 100%;
+.row{
+    margin-left: 0;
+    margin-right: 0;
 }
 .icon{
     height: 50px;
     width: 50px;
+}
+.bio-picture{
+    width:265px;
+    height: 150px;
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .bio-picture{
+        width:375px;
+        height: 212px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .bio-picture{
+        width:600px;
+        height: 339px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .bio-picture{
+        width:850px;
+        height: 480px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .bio-picture{
+        width:450px;
+        height: 254px;
+    }
 }
 .bio-link{
     color: black;
@@ -23,4 +48,3 @@ h1{
 .pressbook-presentation{
     min-width: 300px;
 }
-

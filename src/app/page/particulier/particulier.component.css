@@ -1,15 +1,12 @@
-.bg-grey{
-    top: 100px;
-    position: relative;
-}
 h2{
     font-size: 25px;
     color: black;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.align-card{
-    text-align: -webkit-center;
+.row{
+    margin-left: 0;
+    margin-right: 0;
 }
 @media screen and (max-width: 320px) {
     .mat-card{

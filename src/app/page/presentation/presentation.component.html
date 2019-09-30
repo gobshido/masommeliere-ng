@@ -1,37 +1,32 @@
-<div class="container-fluid bg-grey">
-    <div class="row text-center align-content-center">
-        <h1 class="col-12 my-3 main-title">PLUS QU'UN METIER, UNE PASSION</h1>
-    </div>
-    <div class="d-flex justify-content-center">
-        <mat-spinner *ngIf="!ready"></mat-spinner>
-    </div>
-    <div *ngIf="ready">
-        <div class="row justify-content-center align-content-center description">
-            <div class="col-12" >
-                <div class="row" *ngFor="let contactuser of contactusers">
-                    <div class="col-lg-2 col-0"></div>
-                    <img *ngIf="contactuser.image" class="col-lg-4 col-12 mb-2 bio-picture"
-                         src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
-                    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center"
-                         [innerHTML]="contactuser.presentation">
-                    </div>
-                    <div class="col-lg-2 col-0"></div>
-                </div>
+<div class="row text-center align-content-center">
+    <h1 class="col-12 my-3 main-title">PLUS QU'UN METIER, UNE PASSION</h1>
+</div>
+<div class="d-flex justify-content-center">
+    <mat-spinner *ngIf="!ready"></mat-spinner>
+</div>
+<div *ngIf="ready">
+    <div class="d-flex justify-content-center align-content-center description">
+        <div class="row justify-content-center" *ngFor="let contactuser of contactusers">
+            <img *ngIf="contactuser.image" class="col-xl-4 col-10 mb-2 text-center px-0 bio-picture"
+                 src="{{ contactuser.image.imgpath | imagepath }}" alt="{{ contactuser.image.alt }}"/>
+            <div class="col-xl-4 col-10 d-flex flex-column justify-content-center"
+                 [innerHTML]="contactuser.presentation">
             </div>
         </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
-            <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de <strong>sommelière</strong> :</div>
-        </div>
-        <div class="row justify-content-center">
-        <span *ngFor="let pressbook of pressbooks">
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
+        <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de <strong>sommelière</strong> :</div>
+    </div>
+    <div class="row justify-content-center">
+        <div *ngFor="let pressbook of pressbooks">
             <div class="col pressbook-presentation text-center">
                 <a href="{{ pressbook.url }}" target="_blank" class="text-decoration-none bio-link">
                     <img src="{{ pressbook.image.imgpath | imagepath }}" class="icon" alt="{{ pressbook.image.alt }}"/>
                     <p>{{ pressbook.title }}</p>
                 </a>
             </div>
-        </span>
         </div>
     </div>
 </div>
+

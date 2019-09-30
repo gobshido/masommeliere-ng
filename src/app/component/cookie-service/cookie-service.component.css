@@ -1,10 +1,15 @@
 mat-card{
-    z-index: 100;
+    z-index: 1031;
     background-color: #e5e5e5;
 }
 .bandeau{
     top: 75%;
     font-size: 12px;
+}
+@media only screen and (max-width: 576px) {
+    .bandeau{
+        top: 57%;
+    }
 }
 p{
     margin-bottom: 10px;

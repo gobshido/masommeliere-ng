@@ -1,67 +1,65 @@
-<div class="container-fluid bg-grey">
-    <div class="d-flex justify-content-center">
-        <mat-spinner *ngIf="!ready"></mat-spinner>
-    </div>
-    <div *ngIf="prestation">
-        <div class="row text-center align-content-center">
-            <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title" class="col-12 my-3 main-title">
-                {{prestation.nom.toUpperCase()}}
-            </h1>
-            <ng-template #title>
-                <h1 class="titlecolor col-12 my-3 main-title">{{prestation.nom}}</h1>
-            </ng-template>
-        </div>
-
-        <div *ngIf="ready">
-            <div *ngFor="let prix of prestation.prices">
-                <div *ngIf="prix.isDesactivated == false" class="text-center prix" >
-                    <div *ngFor="let targetprice of prix.targetprices">
-                        {{targetprice.nom.toUpperCase()}}
-                    </div>
-                    <span [innerHTML]="prix.value" class="price"></span>
-                    <span *ngIf="prix.value">
-                        <span [innerHTML]="prix.devise" class="price"></span>
-                    </span>
-                    <span [ngSwitch]="prestation.categorie.nom">
-                        <span *ngSwitchCase="'Expertise et gestion de cave'">
-                            <span [innerHTML]="' de l\'heure'" class="price"></span>
-                        </span>
-                        <span *ngSwitchCase="'Wine Club'">
-                            <span [innerHTML]="' / trimestre'" class="price"></span>
-                        </span>
-                        <span *ngSwitchCase="'Wine Shopper'">
-                            <span [innerHTML]="'Prix sur devis *'" class="price"></span>
-                        </span>
-                        <span *ngSwitchDefault>
-                            <span [innerHTML]="' / personne'" class="price"></span>
-                        </span>
-                    </span>
-                </div>
-            </div>
-            <div *ngIf="prestation.categorie.nom != 'Initiations'">
-                <div [innerHTML]="prestation.description" class="descriptionPrestation justify-content-center"></div>
-            </div>
-            <div *ngFor="let module of prestation.modules">
-                <div class="align-card d-flex justify-content-center flex-wrap">
-                    <mat-card class="d-flex flex-column flex-wrap">
-                        <mat-card-content>
-                            <mat-card-title>
-                                <div [innerHTML]="module.nom" class="modName"></div>
-                            </mat-card-title>
-                            <div class="duree">
-                                <span [innerHTML]="module.duree.timestamp *1000 | date: 'HH'"></span>
-                                h
-                                <span [innerHTML]="module.duree.timestamp *1000 | date: 'mm'"></span>
-                            </div>
-                            <div [innerHTML]="module.description |html"></div>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end back-button">
-            <button role="button" class="btn btn-back" (click)="back()">Retour</button>
-        </div>
-    </div>
-
+<div class="d-flex justify-content-center">
+    <mat-spinner *ngIf="!ready"></mat-spinner>
 </div>
+<div *ngIf="prestation">
+    <div class="row text-center align-content-center">
+        <h1 *ngIf="prestation.categorie.nom != 'Initiations' else title" class="col-12 my-3 main-title">
+            {{prestation.nom.toUpperCase()}}
+        </h1>
+        <ng-template #title>
+            <h1 class="titlecolor col-12 my-3 main-title">{{prestation.nom}}</h1>
+        </ng-template>
+    </div>
+
+    <div *ngIf="ready">
+        <div *ngFor="let prix of prestation.prices">
+            <div *ngIf="prix.isDesactivated == false" class="text-center prix" >
+                <div *ngFor="let targetprice of prix.targetprices">
+                    {{targetprice.nom.toUpperCase()}}
+                </div>
+                <span [innerHTML]="prix.value" class="price"></span>
+                <span *ngIf="prix.value">
+                    <span [innerHTML]="prix.devise" class="price"></span>
+                </span>
+                <span [ngSwitch]="prestation.categorie.nom">
+                    <span *ngSwitchCase="'Expertise et gestion de cave'">
+                        <span [innerHTML]="' de l\'heure'" class="price"></span>
+                    </span>
+                    <span *ngSwitchCase="'Wine Club'">
+                        <span [innerHTML]="' / trimestre'" class="price"></span>
+                    </span>
+                    <span *ngSwitchCase="'Wine Shopper'">
+                        <span [innerHTML]="'Prix sur devis *'" class="price"></span>
+                    </span>
+                    <span *ngSwitchDefault>
+                        <span [innerHTML]="' / personne'" class="price"></span>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div *ngIf="prestation.categorie.nom != 'Initiations'">
+            <div [innerHTML]="prestation.description" class="descriptionPrestation text-center justify-content-center"></div>
+        </div>
+        <div *ngFor="let module of prestation.modules">
+            <div class="d-flex justify-content-center flex-wrap">
+                <mat-card class="d-flex flex-column flex-wrap text-center">
+                    <mat-card-content>
+                        <mat-card-title>
+                            <div [innerHTML]="module.nom" class="modName mb-3"></div>
+                        </mat-card-title>
+                        <div class="mb-3">
+                            <span [innerHTML]="module.duree.timestamp *1000 | date: 'HH'"></span>
+                            h
+                            <span [innerHTML]="module.duree.timestamp *1000 | date: 'mm'"></span>
+                        </div>
+                        <div [innerHTML]="module.description |html"></div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end mb-3 mr-3">
+        <button role="button" class="btn btn-back" (click)="back()">Retour</button>
+    </div>
+</div>
+

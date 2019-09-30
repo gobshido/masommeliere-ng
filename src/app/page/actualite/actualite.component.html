@@ -1,75 +1,43 @@
-<div class="container-fluid bg-grey py-sm-1">
-    <div class="row text-center align-content-center">
-        <h1 class="col-12 my-3 main-title">{{titleService.currentTitle.toUpperCase()}}</h1>
-    </div>
-    <div class="d-flex justify-content-center">
-        <mat-spinner *ngIf="!ready"></mat-spinner>
-    </div>
-    <div class="row justify-content-center flex-column" *ngIf="ready">
-        <div *ngFor="let actualite of actualites" class="d-flex justify-content-center size">
-            <mat-card class="mb-4 d-flex flex-wrap justify-content-center col-xl-6 col-lg-9 col-sm-10 col-11">
-                <div class="row align-content-center">
-                    <app-image mat-card-image
-                               [imgPath]="actualite.image.imgpath"
-                               [alt]="actualite.image.alt"
-                               [title]="actualite.image.credit"
-                               class="col-md-6 col-12 text-center m-0">
-                    </app-image>
-                    <mat-card-content class="col-md-6 col-10 mb-0 d-flex justify-content-center flex-column">
-                        <mat-card-title>
-                            <div [innerHTML]="actualite.titre" class="textTitle text-center"></div>
-                        </mat-card-title>
-                        <div class="pl-5 pl-sm-0">
-                            <div>
-                                <div class="label">Date : </div>
-                                <span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span>
-                            </div>
-                            <div>
-                                <div class="label">Heure : </div>
-                                <span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span>
-                            </div>
-                            <div>
-                                <div class="label">Lieu : </div>
-                                <span [innerHTML]="actualite.lieu"></span>
-                            </div>
-                            <div>
-                                <div class="label">Description : </div>
-                                <div [innerHTML]="actualite.description"></div>
-                            </div>
+<div class="row text-center align-content-center">
+    <h1 class="col-12 my-3 main-title">{{titleService.currentTitle.toUpperCase()}}</h1>
+</div>
+<div class="d-flex justify-content-center">
+    <mat-spinner *ngIf="!ready"></mat-spinner>
+</div>
+<div class="row justify-content-center flex-column" *ngIf="ready">
+    <div *ngFor="let actualite of actualites" class="d-flex justify-content-center size">
+        <mat-card class="mb-4 d-flex flex-wrap justify-content-center col-xl-6 col-lg-9 col-sm-10 col-11">
+            <div class="row align-content-center">
+                <app-image mat-card-image
+                           [imgPath]="actualite.image.imgpath"
+                           [alt]="actualite.image.alt"
+                           [title]="actualite.image.credit"
+                           class="col-md-6 col-12 text-center m-0">
+                </app-image>
+                <mat-card-content class="col-md-6 col-12 mb-0 d-flex justify-content-center flex-column">
+                    <mat-card-title>
+                        <div [innerHTML]="actualite.titre" class="textTitle text-center"></div>
+                    </mat-card-title>
+                    <div class="pl-5 pl-sm-0">
+                        <div>
+                            <div class="label">Date : </div>
+                            <span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span>
                         </div>
-                    </mat-card-content>
-                </div>
-            </mat-card>
-        </div>
-
-<!--        <div class="row justify-content-center" *ngIf="ready">-->
-<!--        <div *ngFor="let actualite of actualites" class="mb-4 d-flex flex-wrap actu">-->
-<!--            <div class="col-md-6 col-12 text-center">-->
-<!--                <app-image [imgPath]="actualite.image.imgpath"-->
-<!--                           [alt]="actualite.image.alt"-->
-<!--                           [title]="actualite.image.credit">-->
-<!--                </app-image>-->
-<!--            </div>-->
-<!--            <div class="col-md-6 col-12 d-flex justify-content-center flex-column info">-->
-<!--                <div [innerHTML]="actualite.titre" class="textTitle"></div>-->
-<!--                <div>-->
-<!--                    <div class="label">Date : </div>-->
-<!--                    <span [innerHTML]="actualite.date.timestamp *1000 | date:'dd-MM-yyyy'"></span>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="label">Heure : </div>-->
-<!--                    <span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="label">Lieu : </div>-->
-<!--                    <span [innerHTML]="actualite.lieu"></span>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="label">Description : </div>-->
-<!--                    <span [innerHTML]="actualite.description"></span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+                        <div>
+                            <div class="label">Heure : </div>
+                            <span [innerHTML]="actualite.heure.timestamp *1000 | date:'HH:mm'"></span>
+                        </div>
+                        <div>
+                            <div class="label">Lieu : </div>
+                            <span [innerHTML]="actualite.lieu"></span>
+                        </div>
+                        <div>
+                            <div class="label">Description : </div>
+                            <div [innerHTML]="actualite.description"></div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </div>
+        </mat-card>
     </div>
 </div>

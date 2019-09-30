@@ -63,15 +63,20 @@
         </nav>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar role="heading" class="bg-color fixed-top">
-            <img src="../assets/images/logo-ma-sommeliere.png" alt="Logo Ma Sommelière vin Bordeaux" class="logo">
+        <mat-toolbar role="heading" class="bg-color sticky-top">
+            <img src="../assets/images/logo-ma-sommeliere.png" alt="Logo Ma Sommelière vin Bordeaux créé par Claire Sauvage" class="logo">
             <span class="remaining-space"></span>
             <button mat-button class="icon-menu" (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon class="size-icon">menu</mat-icon>
             </button>
         </mat-toolbar>
-        <app-cookie-service></app-cookie-service>
-        <footer class="fixed-bottom">
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+            <app-cookie-service></app-cookie-service>
+        </div>
+
+        <footer>
             <table class="footer-size container-fluid">
                 <tr class="row text-center mx-0">
                     <td class="col mt-auto mb-auto px-0">
@@ -98,7 +103,6 @@
                 </tr>
             </table>
         </footer>
-        <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
 

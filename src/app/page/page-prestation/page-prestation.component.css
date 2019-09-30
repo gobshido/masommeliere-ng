@@ -1,9 +1,9 @@
-.bg-grey{
-    top: 100px;
-    position: relative;
-}
 .titlecolor{
     color: #A60815 !important;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
 }
 .prix{
     margin-bottom: 20px;
@@ -16,10 +16,6 @@
 .descriptionPrestation{
     margin-right: 10px;
     margin-left: 10px;
-    text-align: center;
-}
-.align-card{
-    text-align: -webkit-center;
 }
 @media screen and (max-width: 320px) {
     .mat-card{
@@ -40,14 +36,6 @@ mat-card-content{
     color: #A60815;
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 20px;
-}
-.duree{
-    margin-bottom: 20px;
-}
-.back-button{
-    right: 1vw;
-    bottom: 1vh;
 }
 .btn-back {
     color: white;
