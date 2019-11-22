@@ -50,7 +50,7 @@
             </form>
         </mat-card-content>
     </mat-card>
-    <mat-card *ngIf="emailSubmit" class="mt-2 submission col-10 mx-auto">
+    <mat-card *ngIf="emailSubmit" class="mt-2 submission col-10 mx-auto position-absolute">
         <mat-card-content class="text-center">
             Votre message a bien été envoyé.
         </mat-card-content>
@@ -58,7 +58,7 @@
             <button (click)="refresh()" class="d-flex mx-auto btn btn-back">Fermer</button>
         </mat-card-actions>
     </mat-card>
-    <mat-card *ngIf="emailFailed" class="mt-2 submission col-10 mx-auto">
+    <mat-card *ngIf="emailFailed" class="mt-2 submission col-10 mx-auto position-absolute">
         <mat-card-content class="text-center">
             Une erreur s'est produite, veuillez recommencer ou contacter l'administrateur à l'adresse suivante :
             <a href="mailto:masommeliere@gmail.com">masommeliere@gmail.com</a>

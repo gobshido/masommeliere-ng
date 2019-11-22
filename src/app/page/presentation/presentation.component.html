@@ -14,19 +14,21 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center text-center">
-        <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
-        <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de <strong>sommelière</strong> :</div>
-    </div>
-    <div class="row justify-content-center">
-        <div *ngFor="let pressbook of pressbooks">
-            <div class="col pressbook-presentation text-center">
-                <a href="{{ pressbook.url }}" target="_blank" class="text-decoration-none bio-link">
-                    <img src="{{ pressbook.image.imgpath | imagepath }}" class="icon" alt="{{ pressbook.image.alt }}"/>
-                    <p>{{ pressbook.title }}</p>
-                </a>
-            </div>
+</div>
+<div class="row justify-content-center text-center">
+    <div class="col-12 mb-2">Vous désirez en savoir plus ?</div>
+    <div class="col-12 mb-2">Les articles suivant vous montreront une partie de mon parcours de <strong>sommelière</strong> :</div>
+</div>
+<div class="row justify-content-center">
+    <mat-spinner *ngIf="!ready2"></mat-spinner>
+    <div *ngFor="let pressbook of pressbooks">
+        <div class="col pressbook-presentation text-center">
+            <a href="{{ pressbook.url }}" target="_blank" class="text-decoration-none bio-link">
+                <img src="{{ pressbook.image.imgpath | imagepath }}" class="icon" alt="{{ pressbook.image.alt }}"/>
+                <p>{{ pressbook.title }}</p>
+            </a>
         </div>
     </div>
 </div>
+
 

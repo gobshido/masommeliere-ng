@@ -12,6 +12,7 @@ import {
     MatFormFieldModule, MatInputModule, MatSelectModule
 } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 import { PresentationComponent } from './page/presentation/presentation.component';
 import { ParticulierComponent } from './page/particulier/particulier.component';
@@ -32,6 +33,8 @@ import { TargetPriceFilterPipe } from './pipe/target-price-filter.pipe';
 import { CibleFilterPipe } from './pipe/cible-filter.pipe';
 import { CategoryFilterPipe } from './pipe/category-filter.pipe';
 import { ImagepathPipe } from './pipe/imagepath.pipe';
+import { PdfComponent } from './component/pdf/pdf.component';
+import { from } from 'rxjs';
 
 
 const appRoutes: Routes = [
@@ -90,6 +93,7 @@ const appRoutes: Routes = [
     PolitiqueConfidentialiteComponent,
     CookieServiceComponent,
     ContactMailComponent,
+    PdfComponent,
   ],
     imports: [
         BrowserModule,
@@ -110,8 +114,9 @@ const appRoutes: Routes = [
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        RouterModule.forRoot(appRoutes),
         MatSelectModule,
+        NgxExtendedPdfViewerModule,
+        RouterModule.forRoot(appRoutes),
     ],
   providers: [
       CookieService

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TitleService} from '../../service/title.service';
 import {ActualiteService} from '../../service/actualite.service';
 import {Actualite} from '../../class/actualite';
+import {Pdf} from '../../class/pdf';
 
 @Component({
   selector: 'app-actualite',
@@ -10,6 +11,7 @@ import {Actualite} from '../../class/actualite';
 })
 export class ActualiteComponent implements OnInit {
   actualites: Actualite[];
+  pdf: Pdf[];
   public ready: boolean;
 
   constructor(

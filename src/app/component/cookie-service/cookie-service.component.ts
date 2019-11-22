@@ -22,7 +22,7 @@ export class CookieServiceComponent implements OnInit {
     }
   }
   cookieOk() {
-    this.cookieService.set('rgpd', 'rgpd acceptance');
+    this.cookieService.set('rgpd', 'rgpd OK', 365, '/', 'masommeliere.fr', true, 'Strict');
     this.display = false;
   }
   hide() {

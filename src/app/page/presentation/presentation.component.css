@@ -15,28 +15,40 @@ h1{
     width:265px;
     height: 150px;
 }
-@media screen and (min-width: 425px) and (max-width: 768px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
     .bio-picture{
         width:375px;
-        height: 212px;
+        height:212px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .bio-picture{
         width:600px;
-        height: 339px;
+        height:339px;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .bio-picture{
         width:850px;
-        height: 480px;
+        height:480px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
     .bio-picture{
         width:450px;
-        height: 254px;
+        height:254px;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+    .bio-picture{
+        width:550px;
+        height: 311px;
+    }
+}
+@media screen and (min-width: 1601px) {
+    .bio-picture{
+        width:633px;
+        height: 358px;
     }
 }
 .bio-link{

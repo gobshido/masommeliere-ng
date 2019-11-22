@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Contactuser } from '../../class/contactuser';
 import { ContactuserService } from '../../service/contactuser.service';
-import {Pressbook} from '../../class/pressbook';
-import {PressbookService} from '../../service/pressbook.service';
+import { Pressbook } from '../../class/pressbook';
+import { PressbookService } from '../../service/pressbook.service';
 
 @Component({
   selector: 'app-presentation',
@@ -13,6 +13,7 @@ export class PresentationComponent implements OnInit {
   contactusers: Contactuser[];
   pressbooks: Pressbook[];
   public ready: boolean;
+  public ready2: boolean;
 
   constructor(
       private contactServ: ContactuserService,
@@ -28,6 +29,7 @@ export class PresentationComponent implements OnInit {
         this.pressBookServ.getPressbooks()
             .subscribe((pressbooks: Pressbook[]) => {
                 this.pressbooks = pressbooks;
+                this.ready2 = true;
             });
   }
 

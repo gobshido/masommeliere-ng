@@ -1,9 +1,6 @@
-.picture{
-    max-height: 300px;
-}
-.hide-picture{
-    display: none;
-}
+/*.hide-picture{*/
+/*    display: none;*/
+/*}*/
 @media screen and (max-width: 425px) {
     .picture{
         max-height: 200px;
@@ -13,4 +10,7 @@
     .picture{
         max-height: 250px;
     }
+}
+.picture{
+    max-height: 260px;
 }

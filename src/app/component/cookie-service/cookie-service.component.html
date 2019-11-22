@@ -1,34 +1,32 @@
 <div class="d-flex justify-content-center align-content-center position-absolute w-100 bandeau">
-<mat-card *ngIf="!cookieValue && display" class="cookieBackground">
-    <p>
-        Nous utilisons des cookies pour personnaliser notre contenu, améliorer le confort sur notre site
-        et pour analyser le trafic sur notre site.
-    </p>
-    <p>
-        Ma Sommelière respecte votre droit à la vie privée
-        et vous pouvez obtenir plus d’informations en consultant notre
-        <a routerLink="/politique_confidentialite" target="_blank" class="text-dark link">
-            Politique de confidentialité
-        </a>.
-    </p>
-    <p>
-        En poursuivant votre navigation sur notre site, vous acceptez tous les cookies.
-    </p>
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <mat-card-actions class="mb-0">
-                    <button (click)="cookieOk()" class="cookieButton mat-raised-button">Accepter</button>
-                </mat-card-actions>
+    <mat-card *ngIf="!cookieValue && display" class="cookieBackground">
+        <p>
+            Nous utilisons des cookies pour personnaliser notre contenu, améliorer le confort sur notre site
+            et pour analyser le trafic sur notre site.
+        </p>
+        <p>
+            Ma Sommelière respecte votre droit à la vie privée
+            et vous pouvez obtenir plus d’informations en consultant notre
+            <a routerLink="/politique_confidentialite" target="_blank" class="text-dark link">
+                Politique de confidentialité
+            </a>.
+        </p>
+        <p>
+            En poursuivant votre navigation sur notre site, vous acceptez tous les cookies.
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <mat-card-actions class="mb-0">
+                        <button (click)="cookieOk()" class="cookieButton mat-raised-button">Accepter</button>
+                    </mat-card-actions>
+                </div>
+                <div class="col text-center">
+                    <mat-card-actions class="mb-0">
+                        <button (click)="hide()" class="cookieButton mat-raised-button">Refuser</button>
+                    </mat-card-actions>
+                </div>
             </div>
-            <div class="col text-center">
-                <mat-card-actions class="mb-0">
-                    <button (click)="hide()" class="cookieButton mat-raised-button">Refuser</button>
-                </mat-card-actions>
-            </div>
-
         </div>
-    </div>
-
-</mat-card>
+    </mat-card>
 </div>

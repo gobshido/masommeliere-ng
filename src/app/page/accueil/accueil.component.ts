@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../../service/title.service';
 import { Globals } from '../../globals';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-accueil',
@@ -13,7 +12,6 @@ export class AccueilComponent implements OnInit {
   public ready: boolean;
 
   constructor(private titleservice: TitleService,
-              private cookieService: CookieService
   ) {}
   ngOnInit(): void {
     this.ready = true;
