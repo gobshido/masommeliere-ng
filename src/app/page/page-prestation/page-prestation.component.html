@@ -10,7 +10,6 @@
             <h1 class="titlecolor col-12 my-3 main-title">{{prestation.nom}}</h1>
         </ng-template>
     </div>
-
     <div *ngIf="ready">
         <div *ngFor="let prix of prestation.prices">
             <div *ngIf="prix.isDesactivated == false" class="text-center prix" >

@@ -21,6 +21,7 @@ import { ActualiteComponent } from './page/actualite/actualite.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { AccueilComponent } from './page/accueil/accueil.component';
 import { PagePrestationComponent } from './page/page-prestation/page-prestation.component';
+import { TeamBuildingComponent } from './page/team-building/team-building.component';
 import { MentionsLegalesComponent } from './page/mentions-legales/mentions-legales.component';
 import { PolitiqueConfidentialiteComponent } from './page/politique-confidentialite/politique-confidentialite.component';
 
@@ -56,10 +57,13 @@ const appRoutes: Routes = [
   { path: 'professionnel',
     component: ProfessionnelComponent,
     data : { title: 'Initiations'}},
-    { path: 'mentions_legales',
+  { path: 'team_building',
+    component: TeamBuildingComponent,
+    data : { title: 'Team Building'}},
+  { path: 'mentions_legales',
     component: MentionsLegalesComponent,
     data : { title: 'Mentions Légales'}},
-    { path: 'politique_confidentialite',
+  { path: 'politique_confidentialite',
     component: PolitiqueConfidentialiteComponent,
     data : { title: 'Politique de confidentialité'}},
   { path: 'page_prestation/:id',
@@ -94,6 +98,7 @@ const appRoutes: Routes = [
     CookieServiceComponent,
     ContactMailComponent,
     PdfComponent,
+    TeamBuildingComponent,
   ],
     imports: [
         BrowserModule,

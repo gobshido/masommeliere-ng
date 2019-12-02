@@ -40,15 +40,24 @@
                 </a>
                 <mat-nav-list *ngIf="showPro" class="background-prestaMenu">
                     <a mat-list-item routerLink="/professionnel"
-                       routerLinkActive="active" (click)="sidenav.close()"
-                       class="prestaMenu">
+                        routerLinkActive="active" (click)="sidenav.close()"
+                        class="prestaMenu">
                         <span>Initiations</span>
+                    </a>
+                    <a mat-list-item routerLink="/team_building"
+                        routerLinkActive="active" (click)="sidenav.close()"
+                        class="prestaMenu">
+                        <span>Team Building</span>
                     </a>
                     <a *ngFor="let prestation of prestations | cibleFilter: 'Professionnels'" mat-list-item
                        routerLink="/page_prestation/{{ prestation.id }}"
                        routerLinkActive="active" (click)="sidenav.close()"
                        class="prestaMenu">
-                        <span *ngIf ="prestation.categorie.nom != 'Initiations'">{{ prestation.nom }}</span>
+                        <span *ngIf ="prestation.categorie.nom != 'Initiations'">
+                            <span *ngIf ="prestation.categorie.nom != 'Team Building'">
+                                {{ prestation.nom }}
+                            </span>
+                        </span>
                     </a>
                 </mat-nav-list>
                 <a routerLink="/actualite"
